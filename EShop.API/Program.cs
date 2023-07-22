@@ -1,14 +1,21 @@
-using EShop.Data;
 using Microsoft.EntityFrameworkCore;
 
-var builder = WebApplication.CreateBuilder(args);
+using EShop.API.Extensions;
+using EShop.Data; 
 
-// Add services to the container.
+var builder = WebApplication.CreateBuilder(args); 
 
-builder.Services.AddControllers();
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddControllers(); 
 
 builder.Services.AddDbContext<EShopDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddIdentityExtensions();
+builder.Services.AddCustomErrorFilters();
+
+var tokenParams = builder.Services.AddTokenValidationParameters(builder.Configuration);
+builder.Services.AddCors();
+builder.Services.AddJWTAuthentication(tokenParams);
+builder.Services.AddAuthorization();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

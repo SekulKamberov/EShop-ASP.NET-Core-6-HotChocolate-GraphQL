@@ -1,8 +1,28 @@
 {
   "version": 2,
-  "dgSpecHash": "Tge/FZzI/cwFPzQAoeaI3dRgdyFRqGEt/gogk0TZKung+UbFVWgzmkl3BAKzM2JidfHvpGCfp5kWTJj1BpRu4A==",
+  "dgSpecHash": "zocarvv7MxvNSOfqf0ZVb/ga6XXaVsvtXM87Itlk362QE98aN4e1vQKi8ygrz0kyGt2P6dZvktAF9PKMp5EeIA==",
   "success": true,
   "projectFilePath": "C:\\Users\\sekne\\OneDrive\\Documents\\GitHub\\EShop\\EShop.Common\\EShop.Common.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\sekne\\.nuget\\packages\\hotchocolate.abstractions\\12.21.0\\hotchocolate.abstractions.12.21.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\hotchocolate.language\\12.21.0\\hotchocolate.language.12.21.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\hotchocolate.language.syntaxtree\\12.21.0\\hotchocolate.language.syntaxtree.12.21.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\hotchocolate.language.utf8\\12.21.0\\hotchocolate.language.utf8.12.21.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\hotchocolate.language.visitors\\12.21.0\\hotchocolate.language.visitors.12.21.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.20\\microsoft.aspnetcore.cryptography.internal.6.0.20.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.20\\microsoft.aspnetcore.cryptography.keyderivation.6.0.20.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.0\\microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.identity.core\\6.0.20\\microsoft.extensions.identity.core.6.0.20.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.logging\\6.0.0\\microsoft.extensions.logging.6.0.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\6.0.0\\microsoft.extensions.logging.abstractions.6.0.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.objectpool\\3.1.4\\microsoft.extensions.objectpool.3.1.4.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.options\\6.0.0\\microsoft.extensions.options.6.0.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\microsoft.extensions.primitives\\6.0.0\\microsoft.extensions.primitives.6.0.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\system.collections.immutable\\1.7.0\\system.collections.immutable.1.7.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\system.diagnostics.diagnosticsource\\6.0.0\\system.diagnostics.diagnosticsource.6.0.0.nupkg.sha512",
+    "C:\\Users\\sekne\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

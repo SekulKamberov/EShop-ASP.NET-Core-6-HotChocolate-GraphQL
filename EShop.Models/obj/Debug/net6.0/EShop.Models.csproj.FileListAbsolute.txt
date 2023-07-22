@@ -1,0 +1,12 @@
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\bin\Debug\net6.0\EShop.Models.deps.json
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\bin\Debug\net6.0\EShop.Models.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\bin\Debug\net6.0\EShop.Models.pdb
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\EShop.Models.csproj.AssemblyReference.cache
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\EShop.Models.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\EShop.Models.AssemblyInfoInputs.cache
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\EShop.Models.AssemblyInfo.cs
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\EShop.Models.csproj.CoreCompileInputs.cache
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\EShop.Models.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\refint\EShop.Models.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\EShop.Models.pdb
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Models\obj\Debug\net6.0\ref\EShop.Models.dll
