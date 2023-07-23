@@ -963,6 +963,11 @@
           "EShop.Common.dll": {}
         }
       },
+      "EShop.Core/1.0.0": {
+        "runtime": {
+          "EShop.Core.dll": {}
+        }
+      },
       "EShop.Data/1.0.0": {
         "dependencies": {
           "EShop.Models": "1.0.0",
@@ -976,7 +981,9 @@
       },
       "EShop.Infrastructure/1.0.0": {
         "dependencies": {
-          "EShop.Common": "1.0.0"
+          "EShop.Common": "1.0.0",
+          "EShop.Core": "1.0.0",
+          "EShop.Data": "1.0.0"
         },
         "runtime": {
           "EShop.Infrastructure.dll": {}
@@ -1657,6 +1664,11 @@
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
     },
     "EShop.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EShop.Core/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

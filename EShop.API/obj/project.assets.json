@@ -1628,6 +1628,16 @@
           "bin/placeholder/EShop.Common.dll": {}
         }
       },
+      "EShop.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "compile": {
+          "bin/placeholder/EShop.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EShop.Core.dll": {}
+        }
+      },
       "EShop.Data/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1648,7 +1658,9 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "EShop.Common": "1.0.0"
+          "EShop.Common": "1.0.0",
+          "EShop.Core": "1.0.0",
+          "EShop.Data": "1.0.0"
         },
         "compile": {
           "bin/placeholder/EShop.Infrastructure.dll": {}
@@ -4131,6 +4143,11 @@
       "type": "project",
       "path": "../EShop.Common/EShop.Common.csproj",
       "msbuildProject": "../EShop.Common/EShop.Common.csproj"
+    },
+    "EShop.Core/1.0.0": {
+      "type": "project",
+      "path": "../EShop.Core/EShop.Core.csproj",
+      "msbuildProject": "../EShop.Core/EShop.Core.csproj"
     },
     "EShop.Data/1.0.0": {
       "type": "project",

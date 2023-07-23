@@ -8,12 +8,13 @@
 
   <ItemGroup>
     <Folder Include="Mutations\" />
-    <Folder Include="Repositories\" />
     <Folder Include="Resolvers\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\EShop.Common\EShop.Common.csproj" />
+    <ProjectReference Include="..\EShop.Core\EShop.Core.csproj" />
+    <ProjectReference Include="..\EShop.Data\EShop.Data.csproj" />
   </ItemGroup>
 
 </Project>

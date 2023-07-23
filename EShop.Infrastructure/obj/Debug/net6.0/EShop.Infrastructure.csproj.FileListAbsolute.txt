@@ -13,3 +13,9 @@ C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\obj\Debug\ne
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Common.dll
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Common.pdb
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\obj\Debug\net6.0\EShop.Infrastructure.csproj.CopyComplete
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Core.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Data.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Models.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Core.pdb
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Data.pdb
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Models.pdb
