@@ -15,7 +15,7 @@ namespace EShop.Data.Configurations
         {
             builder.HasOne(order => order.Cart) 
                 .WithMany(Cart => Cart.Orders)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);  
 
             builder.HasOne(order => order.User)
                 .WithMany(users => users.Orders);

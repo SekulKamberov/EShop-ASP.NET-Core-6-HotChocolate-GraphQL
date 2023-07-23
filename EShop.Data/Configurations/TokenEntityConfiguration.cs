@@ -17,7 +17,7 @@ namespace EShop.Data.Configurations
         {
             builder.HasOne(token => token.User)
                 .WithMany(users => users.Tokens)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

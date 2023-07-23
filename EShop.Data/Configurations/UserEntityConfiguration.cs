@@ -17,11 +17,11 @@ namespace EShop.Data.Configurations
         {
             builder.HasMany(user => user.Carts)
                 .WithOne(Cart => Cart.User)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(user => user.Orders)
                 .WithOne(Order => Order.User)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

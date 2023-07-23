@@ -17,7 +17,7 @@ namespace EShop.Data.Configurations
         {
             builder.HasMany(productCategory => productCategory.Products)
                 .WithOne(ProductCategory => ProductCategory.Category)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }

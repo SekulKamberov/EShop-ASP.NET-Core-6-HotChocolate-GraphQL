@@ -3,36 +3,35 @@ using Microsoft.EntityFrameworkCore;
 using EShop.API.Extensions;
 using EShop.Data; 
 
-var builder = WebApplication.CreateBuilder(args); 
+    var builder = WebApplication.CreateBuilder(args); 
 
-builder.Services.AddControllers(); 
+    builder.Services.AddControllers(); 
 
-builder.Services.AddDbContext<EShopDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+    builder.Services.AddDbContext<EShopDbContext>(options => 
+        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-builder.Services.AddIdentityExtensions();
-builder.Services.AddCustomErrorFilters();
+    builder.Services.AddIdentityExtensions();
+    builder.Services.AddCustomErrorFilters();
 
-var tokenParams = builder.Services.AddTokenValidationParameters(builder.Configuration);
-builder.Services.AddCors();
-builder.Services.AddJWTAuthentication(tokenParams);
-builder.Services.AddAuthorization();
+    var tokenParams = builder.Services.AddTokenValidationParameters(builder.Configuration);
 
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+    builder.Services.AddCors();
+    builder.Services.AddJWTAuthentication(tokenParams);
+    builder.Services.AddAuthorization();
 
-var app = builder.Build();
+    builder.Services.AddEndpointsApiExplorer();
+    builder.Services.AddSwaggerGen();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    var app = builder.Build(); 
 
-app.UseHttpsRedirection();
+    app.UseRouting();
 
-app.UseAuthorization();
+    app.UseAuthentication();
+    app.UseAuthorization();
 
-app.MapControllers();
+    app.UseEndpoints(endpoints =>
+        {
+            endpoints.MapGraphQL();
+        }); 
 
-app.Run();
+    app.Run();

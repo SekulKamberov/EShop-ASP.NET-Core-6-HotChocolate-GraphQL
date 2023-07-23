@@ -23,7 +23,7 @@ namespace EShop.Data.Configurations
 
             builder.HasMany(product => product.CartProducts)
                 .WithOne(CartProduct => CartProduct.Product)
-                .OnDelete(DeleteBehavior.Cascade);
+                .OnDelete(DeleteBehavior.NoAction);
         }
     }
 }
