@@ -1,0 +1,268 @@
+﻿[
+  {
+    "AvatarUrl": "https://previews.123rf.com/images/subbotina/subbotina1311/subbotina131100034/23736103-blonde-woman-portrait-beautiful-blond-girl-with-long-wavy-hair.jpg",
+    "FirstName": "Destiny Smith",
+    "LastName": "Harper",
+    "Gender": "female",
+    "isActive": true,
+    "IsProfileCompleted": false,
+    "email": "destiny@google.com",
+    "PhoneNumber": "+359 897 4555-778",
+    "Address": "Dondukov blv, Bulgaria, Sofia, 1000",
+    "Bio": "Deserunt consequat non amet elit exercitation duis esse eu sunt consequat ipsum adipisicing mollit eu. Aliquip do aliquip incididunt ut anim et. Dolore amet amet fugiat dolore elit voluptate. In sint dolore qui officia.\r\n",
+    "Carts": [
+      {
+        "Orders": [
+          {
+            "Address": "12 Serdika Str.,Sofia, 1000",
+            "PhoneNumber": "359 211 4345-118"
+          },
+          {
+            "Address": "158 Car Simeon Str.,Sofia, 1450",
+            "PhoneNumber": "359 345 6721-780"
+          }
+        ]
+      },
+      {
+        "Orders": [
+          {
+            "Address": " Vasil Levski blvd., fl. 3, apt. 10 A, Sofia, 1000",
+            "PhoneNumber": "359 899 897-009"
+          },
+          {
+            "Address": "68 Parchevich str., Sofia, 1000",
+            "PhoneNumber": "359 897 6721-770"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AvatarUrl": "https://img.freepik.com/free-photo/young-cute-woman-outdoor_624325-1680.jpg?w=740&t=st=1690120717~exp=1690121317~hmac=a80bb46dabfacc2fc393b7ed13d0b2657b4669f68943793c37baae03a1904e8c",
+    "FirstName": "Jessica Simpson",
+    "LastName": "Harper",
+    "Gender": "female",
+    "isActive": true,
+    "IsProfileCompleted": false,
+    "email": "jessicasimpson@google.com",
+    "PhoneNumber": "359 898 7890-432",
+    "Address": "128 Parchevich str., Sofia, 1000",
+    "Bio": "Anim tempor voluptate aute minim sint ut proident do. Cupidatat laborum ad enim voluptate. Ipsum nisi consectetur in veniam velit in reprehenderit dolore eiusmod proident. Do aliqua sint in irure exercitation ex nostrud exercitation esse cillum in non esse sunt. Voluptate veniam culpa anim dolore laborum sit voluptate nulla duis ad.\r\n",
+    "Carts": [
+      {
+        "Orders": [
+          {
+            "Address": "228 Parchevich str., Sofia, 1300",
+            "PhoneNumber": "359 896 7855-432"
+          },
+          {
+            "Address": "368 Parchevich str., Sofia, 3000",
+            "PhoneNumber": "359 87 7877-432"
+          }
+        ]
+      },
+      {
+        "Orders": [
+          {
+            "Address": "400 Parchevich str., Sofia, 1000",
+            "PhoneNumber": "359 898 6777-402"
+          },
+          {
+            "Address": "1 Parchevich str., Sofia, 1000",
+            "PhoneNumber": "359 895 1190-434"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AvatarUrl": "https://previews.123rf.com/images/miramiska/miramiska1409/miramiska140900119/31358029-face-of-a-young-beautiful-smiling-blondy-girl.jpg",
+    "FirstName": "Lora Simpson",
+    "LastName": "Harper",
+    "Gender": "female",
+    "isActive": false,
+    "IsProfileCompleted": false,
+    "email": "lorasimpson@google.com",
+    "PhoneNumber": "+1 (911) 474-1203",
+    "Address": "275 Ira Court, Durham, Texas, 5511",
+    "Bio": "Nostrud pariatur aute incididunt laborum aute occaecat sint velit consequat eu sit. Veniam enim dolor ipsum eiusmod quis dolore sit nisi qui ex incididunt consequat qui aliqua. Lorem officia nulla mollit ut adipisicing. Nulla veniam quis nisi nostrud irure.\r\n",
+    "Carts": [
+      {
+        "Orders": [
+          {
+            "Address": "424 Hamilton Walk, Dixie, Iowa, 3089",
+            "PhoneNumber": "+1 (973) 573-3761"
+          },
+          {
+            "Address": "794 Lincoln Terrace, Orin, Massachusetts, 1989",
+            "PhoneNumber": "+1 (886) 571-2349"
+          }
+        ]
+      },
+      {
+        "Orders": [
+          {
+            "Address": "887 Howard Place, Cetronia, South Dakota, 9237",
+            "PhoneNumber": "+1 (819) 546-2819"
+          },
+          {
+            "Address": "941 Louise Terrace, Lacomb, Puerto Rico, 9762",
+            "PhoneNumber": "+1 (888) 536-2292"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AvatarUrl": "https://img.freepik.com/free-photo/attractive-young-blond-woman-indoor_624325-4402.jpg?w=1380&t=st=1690124964~exp=1690125564~hmac=75e561fa32172de650b26fb908dc6d156bc508faf58a9e2d20adc64ad20be184",
+    "FirstName": "Anastasia Wynn",
+    "LastName": "Young Tyler",
+    "Gender": "female",
+    "isActive": true,
+    "IsProfileCompleted": false,
+    "email": "youngtyler@google.com",
+    "PhoneNumber": "+1 (963) 470-2968",
+    "Address": "494 Oceanic Avenue, Greensburg, Nevada, 1777",
+    "Bio": "Amet nostrud nulla Lorem ut culpa ipsum esse ex non non consectetur voluptate consectetur ad. Sunt dolore ut ea culpa. Do in est cupidatat commodo qui culpa do anim cillum enim. Officia anim ut sint nostrud velit magna velit in ullamco.\r\n",
+    "Carts": [
+      {
+        "Orders": [
+          {
+            "Address": "652 Hendrickson Street, Skyland, District Of Columbia, 7134",
+            "PhoneNumber": "+1 (883) 580-3037"
+          },
+          {
+            "Address": "699 Fanchon Place, Tecolotito, New Mexico, 8782",
+            "PhoneNumber": "+1 (813) 435-2597"
+          }
+        ]
+      },
+      {
+        "Orders": [
+          {
+            "Address": "420 Bath Avenue, Henrietta, Vermont, 6229",
+            "PhoneNumber": "+1 (991) 541-3579"
+          },
+          {
+            "Address": "245 Celeste Court, Chloride, Alabama, 1884",
+            "PhoneNumber": "+1 (922) 566-2638"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AvatarUrl": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-106834196-1563547318.jpg?crop=1xw:1xh;center,top&resize=980:*",
+    "FirstName": "Eaton Johnston",
+    "LastName": "Mona Padilla",
+    "Gender": "female",
+    "isActive": false,
+    "IsProfileCompleted": true,
+    "email": "monapadilla@google.com",
+    "PhoneNumber": "+1 (901) 418-3156",
+    "Address": "127 Elliott Walk, Madrid, Illinois, 9237",
+    "Bio": "Laborum irure exercitation tempor dolore. Duis mollit consectetur do cupidatat. Fugiat elit culpa deserunt incididunt elit aliqua officia sint. Qui duis tempor tempor fugiat consequat cillum esse enim adipisicing aliqua dolore elit aliquip. Aliquip est aute aute anim ipsum laborum aliquip aute enim incididunt mollit sint.\r\n",
+    "Carts": [
+      {
+        "Orders": [
+          {
+            "Address": "567 Hunterfly Place, Richmond, North Carolina, 2342",
+            "PhoneNumber": "+1 (900) 425-2221"
+          },
+          {
+            "Address": "981 Highlawn Avenue, Garberville, Nebraska, 5671",
+            "PhoneNumber": "+1 (964) 540-3124"
+          }
+        ]
+      },
+      {
+        "Orders": [
+          {
+            "Address": "972 Adams Street, Fairfield, Louisiana, 9254",
+            "PhoneNumber": "+1 (836) 582-3361"
+          },
+          {
+            "Address": "428 Ebony Court, Groveville, Georgia, 8680",
+            "PhoneNumber": "+1 (866) 597-2076"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AvatarUrl": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-85703142-1563547320.jpg?crop=1xw:1xh;center,top&resize=980:*",
+    "FirstName": "Valdez Sawyer",
+    "LastName": "Maritza Marquez",
+    "Gender": "female",
+    "isActive": true,
+    "IsProfileCompleted": true,
+    "email": "maritzamarquez@google.com",
+    "PhoneNumber": "+1 (831) 465-2865",
+    "Address": "824 Bouck Court, Farmington, Pennsylvania, 2422",
+    "Bio": "Excepteur duis commodo adipisicing dolore laboris nisi in ea est adipisicing nulla cillum veniam. Adipisicing ex aute commodo voluptate. Consectetur excepteur velit eu reprehenderit irure minim aliquip. Voluptate dolore adipisicing eiusmod dolore amet. Do consequat esse aliquip nostrud anim est deserunt enim consequat pariatur aliquip laborum labore magna.\r\n",
+    "Carts": [
+      {
+        "Orders": [
+          {
+            "Address": "711 Florence Avenue, Thynedale, Florida, 7183",
+            "PhoneNumber": "+1 (998) 542-3324"
+          },
+          {
+            "Address": "996 Banker Street, Crawfordsville, Kansas, 4996",
+            "PhoneNumber": "+1 (893) 502-3510"
+          }
+        ]
+      },
+      {
+        "Orders": [
+          {
+            "Address": "725 Bryant Street, Harold, South Carolina, 2877",
+            "PhoneNumber": "+1 (895) 513-3802"
+          },
+          {
+            "Address": "728 Powers Street, Newcastle, North Dakota, 8527",
+            "PhoneNumber": "+1 (948) 427-3063"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "AvatarUrl": "https://hips.hearstapps.com/hmg-prod/images/gettyimages-52452238-1563547320.jpg?crop=1xw:1xh;center,top&resize=980:*",
+    "FirstName": "Moon Kirk",
+    "LastName": "Michael Fleming",
+    "Gender": "female",
+    "isActive": false,
+    "IsProfileCompleted": true,
+    "email": "michaelfleming@google.com",
+    "PhoneNumber": "+1 (950) 554-2377",
+    "Address": "352 Apollo Street, Beaulieu, Michigan, 9285",
+    "Bio": "Aliquip pariatur id elit reprehenderit dolor nulla nostrud quis irure reprehenderit do magna pariatur minim. Amet culpa id sit nostrud eu consequat et sint anim Lorem aliqua. Officia nostrud magna non cillum. Magna cupidatat incididunt consectetur eu cupidatat enim sint veniam. Laboris excepteur voluptate eu anim qui dolor.\r\n",
+    "Carts": [
+      {
+        "Orders": [
+          {
+            "Address": "351 Garden Place, Belfair, Connecticut, 7089",
+            "PhoneNumber": "+1 (889) 519-2479"
+          },
+          {
+            "Address": "387 Temple Court, Topanga, Minnesota, 5540",
+            "PhoneNumber": "+1 (895) 489-2710"
+          }
+        ]
+      },
+      {
+        "Orders": [
+          {
+            "Address": "687 Oak Street, Cucumber, West Virginia, 1929",
+            "PhoneNumber": "+1 (906) 583-3853"
+          },
+          {
+            "Address": "986 Hewes Street, Needmore, New Jersey, 345",
+            "PhoneNumber": "+1 (901) 468-3449"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -105,3 +105,8 @@ C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\EShop.
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\EShop.Infrastructure.dll
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\EShop.Infrastructure.pdb
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\EShop.Common.pdb
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\HotChocolate.Authorization.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\HotChocolate.Execution.Abstractions.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\HotChocolate.Language.Web.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\HotChocolate.Transport.Sockets.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\System.Text.Json.dll

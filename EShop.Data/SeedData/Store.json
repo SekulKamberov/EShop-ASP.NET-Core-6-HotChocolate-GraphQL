@@ -1,0 +1,194 @@
+﻿[
+  {
+    "Name": "Sekul",
+    "Email": "sekulexample@gmail.com",
+    "PhoneNumber": "+353 123 4567-890",
+    "Description": "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop.\r\n",
+    "Products": [
+      {
+        "Name": "Phone",
+        "Price": 1061.9469
+      },
+      {
+        "Name": "Phone",
+        "Price": 3067.56
+      },
+      {
+        "Name": "Gin",
+        "Price": 5676.24
+      },
+      {
+        "Name": "Vodka",
+        "Price": 3674.05
+      },
+      {
+        "Name": "Bourbon",
+        "Price": 1362.89
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 1931.18
+      }
+    ]
+  },
+  {
+    "Name": "Nancyblondy",
+    "Email": "nancy@google.com",
+    "PhoneNumber": "+353 567 4567-456",
+    "Description": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.\r\n",
+    "Products": [
+      {
+        "Name": "Gin",
+        "Price": 1988.38
+      },
+      {
+        "Name": "Gin",
+        "Price": 2453.70
+      },
+      {
+        "Name": "Gin",
+        "Price": 1868.40
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 1391.36
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 1171.07
+      },
+      {
+        "Name": "Vodka",
+        "Price": 3995.53
+      }
+    ]
+  },
+  {
+    "Name": "Melanie",
+    "Email": "melanieblondy@gmail.com",
+    "PhoneNumber": "+353 453 4567-770",
+    "Description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.\r\n",
+    "Products": [
+      {
+        "Name": "Vodka",
+        "Price": 2242.22
+      },
+      {
+        "Name": "Vodka",
+        "Price": 3656.90
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 2323.40
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 2868.02
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 2357.61
+      },
+      {
+        "Name": "Gin",
+        "Price": 3581.64
+      }
+    ]
+  },
+  {
+    "Name": "George",
+    "Email": "georgethorogood@google.com",
+    "PhoneNumber": "+353 234 4567-678",
+    "Description": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College i.\r\n",
+    "Products": [
+      {
+        "Name": "Whiskey",
+        "Price": 387.47
+      },
+      {
+        "Name": "Gin",
+        "Price": 72.10
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 388.47
+      },
+      {
+        "Name": "Gin",
+        "Price": 736.94
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 912.38
+      },
+      {
+        "Name": "Gin",
+        "Price": 127.65
+      }
+    ]
+  },
+  {
+    "Name": "Jessica",
+    "Email": "jessicaredhead@google.com",
+    "PhoneNumber": "+353 661 4567-009",
+    "Description": "Letraset sheets containing Lorem Ipsum passages, and more recently with desktop.\r\n",
+    "Products": [
+      {
+        "Name": "Vodka",
+        "Price": 143.19
+      },
+      {
+        "Name": "Gin",
+        "Price": 3403.47
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 1102.34
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 2374.54
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 3959.64
+      },
+      {
+        "Name": "Whiskey",
+        "Price": 1248.78
+      }
+    ]
+  },
+  {
+    "Name": "Jinger",
+    "Email": "jingervuolo@google.com",
+    "PhoneNumber": "+353 311 4555-778",
+    "Description": "Do aute enim eiusmod quis consequat adipisicing pariatur occaecat velit culpa. Minim in magna irure ut ipsum non proident do dolore ullamco et. Commodo esse et in esse deserunt irure ex nulla eu. Reprehenderit ipsum exercitation fugiat cupidatat irure occaecat consectetur minim labore ipsum.\r\n",
+    "Products": [
+      {
+        "Name": "Whiskey",
+        "Price": 2653.98
+      },
+      {
+        "Name": "Gin",
+        "Price": 3546.58
+      },
+      {
+        "Name": "Gin",
+        "Price": 2425.38
+      },
+      {
+        "Name": "Gin",
+        "Price": 2634.48
+      },
+      {
+        "Name": "Vodka",
+        "Price": 1835.19
+      },
+      {
+        "Name": "Gin",
+        "Price": 3112.54
+      }
+    ]
+  }
+]

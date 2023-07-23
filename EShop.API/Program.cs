@@ -22,16 +22,20 @@ using EShop.Data;
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
 
-    var app = builder.Build(); 
+    var app = builder.Build();  
+
+    //using (var scope = app.Services.CreateScope())
+    //{
+    //    var eShopDbContext = scope.ServiceProvider.GetRequiredService<EShopDbContext>();
+    //    if (eShopDbContext != null)
+    //        app.UseDataSeeding(eShopDbContext);
+    //}
 
     app.UseRouting();
 
     app.UseAuthentication();
     app.UseAuthorization();
 
-    app.UseEndpoints(endpoints =>
-        {
-            endpoints.MapGraphQL();
-        }); 
+    app.MapGraphQL();
 
     app.Run();

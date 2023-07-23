@@ -49,15 +49,15 @@
           "dependencies": {
             "HotChocolate.AspNetCore": {
               "target": "Package",
-              "version": "[12.21.0, )"
+              "version": "[13.3.3, )"
             },
             "HotChocolate.AspNetCore.Authorization": {
               "target": "Package",
-              "version": "[12.21.0, )"
+              "version": "[13.3.3, )"
             },
             "HotChocolate.Data.EntityFramework": {
               "target": "Package",
-              "version": "[12.21.0, )"
+              "version": "[13.3.3, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -219,6 +219,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.20, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.3, )"
             }
           },
           "imports": [
