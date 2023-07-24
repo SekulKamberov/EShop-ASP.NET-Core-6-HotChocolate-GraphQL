@@ -20,9 +20,29 @@ namespace EShop.Infrastructure.Repositories
             return await ApplySpecification(spec).ToListAsync();
         } 
 
+        public async Task<TEntity> GetEntityBySpec(ISpecification<TEntity> spec)
+        {
+            return await ApplySpecification(spec).FirstOrDefaultAsync();
+        }
+
         private IQueryable<TEntity> ApplySpecification(ISpecification<TEntity> spec)
         {
             return SpecificationEvaluator<TEntity>.EvaluateQuery(context.Set<TEntity>().AsQueryable(), spec);
+        }
+
+        public Task<bool> AddEntity(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> UpdateEntity(TEntity entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<bool> DeleteEntity(TEntity entity)
+        {
+            throw new NotImplementedException();
         }
     }
 }

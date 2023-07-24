@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -9,6 +9,12 @@
   <ItemGroup>
     <Folder Include="Mutations\" />
     <Folder Include="Resolvers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="HotChocolate.AspNetCore" Version="13.3.3" />
+    <PackageReference Include="HotChocolate.AspNetCore.Authorization" Version="13.3.3" />
+    <PackageReference Include="HotChocolate.Data.EntityFramework" Version="13.3.3" />
   </ItemGroup>
 
   <ItemGroup>

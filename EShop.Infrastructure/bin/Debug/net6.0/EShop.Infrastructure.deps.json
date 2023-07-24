@@ -10,68 +10,349 @@
         "dependencies": {
           "EShop.Common": "1.0.0",
           "EShop.Core": "1.0.0",
-          "EShop.Data": "1.0.0"
+          "EShop.Data": "1.0.0",
+          "HotChocolate.AspNetCore": "13.3.3",
+          "HotChocolate.AspNetCore.Authorization": "13.3.3",
+          "HotChocolate.Data.EntityFramework": "13.3.3"
         },
         "runtime": {
           "EShop.Infrastructure.dll": {}
         }
       },
-      "HotChocolate.Abstractions/12.21.0": {
+      "GreenDonut/13.3.3": {
         "dependencies": {
-          "HotChocolate.Language": "12.21.0",
+          "Microsoft.Extensions.ObjectPool": "3.1.4",
+          "System.Diagnostics.DiagnosticSource": "6.0.1",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/net6.0/GreenDonut.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Authorization": "13.3.3",
+          "HotChocolate.Execution": "13.3.3",
+          "HotChocolate.Fetching": "13.3.3",
+          "HotChocolate.Types": "13.3.3",
+          "HotChocolate.Types.CursorPagination": "13.3.3",
+          "HotChocolate.Types.Mutations": "13.3.3",
+          "HotChocolate.Types.OffsetPagination": "13.3.3",
+          "HotChocolate.Validation": "13.3.3"
+        }
+      },
+      "HotChocolate.Abstractions/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Language": "13.3.3",
           "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
           "System.Collections.Immutable": "6.0.0"
         },
         "runtime": {
           "lib/net6.0/HotChocolate.Abstractions.dll": {
-            "assemblyVersion": "12.21.0.0",
-            "fileVersion": "12.21.0.0"
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
           }
         }
       },
-      "HotChocolate.Language/12.21.0": {
+      "HotChocolate.AspNetCore/13.3.3": {
         "dependencies": {
-          "HotChocolate.Language.SyntaxTree": "12.21.0",
-          "HotChocolate.Language.Utf8": "12.21.0",
-          "HotChocolate.Language.Visitors": "12.21.0"
+          "HotChocolate": "13.3.3",
+          "HotChocolate.Subscriptions.InMemory": "13.3.3",
+          "HotChocolate.Transport.Sockets": "13.3.3",
+          "HotChocolate.Types.Scalars.Upload": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.AspNetCore.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.AspNetCore.Authorization/13.3.3": {
+        "dependencies": {
+          "HotChocolate": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.AspNetCore.Authorization.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Authorization/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Execution": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Authorization.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Data/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Execution": "13.3.3",
+          "HotChocolate.Types.CursorPagination": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Data.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Data.EntityFramework/13.3.3": {
+        "dependencies": {
+          "HotChocolate": "13.3.3",
+          "HotChocolate.Data": "13.3.3",
+          "Microsoft.EntityFrameworkCore": "6.0.20"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Data.EntityFramework.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Execution/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Abstractions": "13.3.3",
+          "HotChocolate.Execution.Abstractions": "13.3.3",
+          "HotChocolate.Fetching": "13.3.3",
+          "HotChocolate.Types": "13.3.3",
+          "HotChocolate.Validation": "13.3.3",
+          "Microsoft.Extensions.DependencyInjection": "6.0.1",
+          "Microsoft.Extensions.DiagnosticAdapter": "3.1.4",
+          "System.Threading.Channels": "4.7.0"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Execution.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Execution.Abstractions/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Abstractions": "13.3.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Execution.Abstractions.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Fetching/13.3.3": {
+        "dependencies": {
+          "GreenDonut": "13.3.3",
+          "HotChocolate.Types": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Fetching.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Language/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Language.SyntaxTree": "13.3.3",
+          "HotChocolate.Language.Utf8": "13.3.3",
+          "HotChocolate.Language.Visitors": "13.3.3",
+          "HotChocolate.Language.Web": "13.3.3"
         },
         "runtime": {
           "lib/net6.0/HotChocolate.Language.dll": {
-            "assemblyVersion": "12.21.0.0",
-            "fileVersion": "12.21.0.0"
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
           }
         }
       },
-      "HotChocolate.Language.SyntaxTree/12.21.0": {
+      "HotChocolate.Language.SyntaxTree/13.3.3": {
         "dependencies": {
           "Microsoft.Extensions.ObjectPool": "3.1.4"
         },
         "runtime": {
           "lib/net6.0/HotChocolate.Language.SyntaxTree.dll": {
-            "assemblyVersion": "12.21.0.0",
-            "fileVersion": "12.21.0.0"
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
           }
         }
       },
-      "HotChocolate.Language.Utf8/12.21.0": {
+      "HotChocolate.Language.Utf8/13.3.3": {
         "dependencies": {
-          "HotChocolate.Language.SyntaxTree": "12.21.0"
+          "HotChocolate.Language.SyntaxTree": "13.3.3"
         },
         "runtime": {
           "lib/net6.0/HotChocolate.Language.Utf8.dll": {
-            "assemblyVersion": "12.21.0.0",
-            "fileVersion": "12.21.0.0"
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
           }
         }
       },
-      "HotChocolate.Language.Visitors/12.21.0": {
+      "HotChocolate.Language.Visitors/13.3.3": {
         "dependencies": {
-          "HotChocolate.Language.SyntaxTree": "12.21.0"
+          "HotChocolate.Language.SyntaxTree": "13.3.3"
         },
         "runtime": {
           "lib/net6.0/HotChocolate.Language.Visitors.dll": {
-            "assemblyVersion": "12.21.0.0",
-            "fileVersion": "12.21.0.0"
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Language.Web/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Language.Utf8": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Language.Web.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Subscriptions/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Abstractions": "13.3.3",
+          "HotChocolate.Execution.Abstractions": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Subscriptions.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Subscriptions.InMemory/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Execution.Abstractions": "13.3.3",
+          "HotChocolate.Subscriptions": "13.3.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Subscriptions.InMemory.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Transport.Sockets/13.3.3": {
+        "dependencies": {
+          "System.IO.Pipelines": "4.7.0"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Transport.Sockets.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Types/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Abstractions": "13.3.3",
+          "HotChocolate.Utilities": "13.3.3",
+          "HotChocolate.Utilities.Introspection": "13.3.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.ObjectPool": "3.1.4",
+          "System.ComponentModel.Annotations": "4.7.0",
+          "System.Text.Json": "6.0.7"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Types.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Types.CursorPagination/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Execution": "13.3.3",
+          "HotChocolate.Types": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Types.CursorPagination.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Types.Mutations/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Execution": "13.3.3",
+          "HotChocolate.Types": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Types.Mutations.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Types.OffsetPagination/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Execution": "13.3.3",
+          "HotChocolate.Types": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Types.OffsetPagination.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Types.Scalars.Upload/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Types": "13.3.3"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Types.Scalars.Upload.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Utilities/13.3.3": {
+        "dependencies": {
+          "Microsoft.Bcl.AsyncInterfaces": "1.1.0",
+          "System.Memory": "4.5.4",
+          "System.Threading.Tasks.Extensions": "4.5.4"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Utilities.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Utilities.Introspection/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Language": "13.3.3",
+          "System.Text.Json": "6.0.7"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Utilities.Introspection.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
+          }
+        }
+      },
+      "HotChocolate.Validation/13.3.3": {
+        "dependencies": {
+          "HotChocolate.Types": "13.3.3",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
+          "Microsoft.Extensions.Options": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/HotChocolate.Validation.dll": {
+            "assemblyVersion": "13.3.3.0",
+            "fileVersion": "13.3.3.0"
           }
         }
       },
@@ -92,6 +373,17 @@
             "assemblyVersion": "6.0.0.0",
             "fileVersion": "6.0.2023.32106"
           }
+        }
+      },
+      "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Http.Features": "2.2.0",
+          "System.Text.Encodings.Web": "6.0.0"
+        }
+      },
+      "Microsoft.AspNetCore.Http.Features/2.2.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Primitives": "6.0.0"
         }
       },
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.20": {
@@ -226,12 +518,6 @@
       "Microsoft.Extensions.Caching.Abstractions/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Caching.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
       "Microsoft.Extensions.Caching.Memory/6.0.1": {
@@ -252,12 +538,6 @@
       "Microsoft.Extensions.Configuration.Abstractions/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "6.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.Configuration.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
       "Microsoft.Extensions.DependencyInjection/6.0.1": {
@@ -272,11 +552,15 @@
           }
         }
       },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {
+      "Microsoft.Extensions.DependencyInjection.Abstractions/6.0.0": {},
+      "Microsoft.Extensions.DiagnosticAdapter/3.1.4": {
+        "dependencies": {
+          "System.Diagnostics.DiagnosticSource": "6.0.1"
+        },
         "runtime": {
-          "lib/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
+          "lib/netcoreapp2.0/Microsoft.Extensions.DiagnosticAdapter.dll": {
+            "assemblyVersion": "3.1.4.0",
+            "fileVersion": "3.100.420.21409"
           }
         }
       },
@@ -313,51 +597,19 @@
           "Microsoft.Extensions.Logging.Abstractions": "6.0.0",
           "Microsoft.Extensions.Options": "6.0.0",
           "System.Diagnostics.DiagnosticSource": "6.0.1"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Logging.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
-      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Logging.Abstractions.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
-        }
-      },
-      "Microsoft.Extensions.ObjectPool/3.1.4": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.ObjectPool.dll": {
-            "assemblyVersion": "3.1.4.0",
-            "fileVersion": "3.100.420.21409"
-          }
-        }
-      },
+      "Microsoft.Extensions.Logging.Abstractions/6.0.0": {},
+      "Microsoft.Extensions.ObjectPool/3.1.4": {},
       "Microsoft.Extensions.Options/6.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "6.0.0",
           "Microsoft.Extensions.Primitives": "6.0.0"
-        },
-        "runtime": {
-          "lib/netstandard2.1/Microsoft.Extensions.Options.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
       "Microsoft.Extensions.Primitives/6.0.0": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
-        },
-        "runtime": {
-          "lib/net6.0/Microsoft.Extensions.Primitives.dll": {
-            "assemblyVersion": "6.0.0.0",
-            "fileVersion": "6.0.21.52210"
-          }
         }
       },
       "Microsoft.Identity.Client/4.21.1": {
@@ -463,6 +715,7 @@
           "System.Runtime.CompilerServices.Unsafe": "6.0.0"
         }
       },
+      "System.ComponentModel.Annotations/4.7.0": {},
       "System.Configuration.ConfigurationManager/4.7.0": {
         "dependencies": {
           "System.Security.Cryptography.ProtectedData": "4.7.0",
@@ -524,6 +777,8 @@
           }
         }
       },
+      "System.IO.Pipelines/4.7.0": {},
+      "System.Memory/4.5.4": {},
       "System.Runtime.Caching/4.7.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.7.0"
@@ -585,6 +840,25 @@
           "Microsoft.NETCore.Platforms": "3.1.0"
         }
       },
+      "System.Text.Encodings.Web/6.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+        }
+      },
+      "System.Text.Json/6.0.7": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "6.0.0",
+          "System.Text.Encodings.Web": "6.0.0"
+        },
+        "runtime": {
+          "lib/net6.0/System.Text.Json.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.1122.52304"
+          }
+        }
+      },
+      "System.Threading.Channels/4.7.0": {},
+      "System.Threading.Tasks.Extensions/4.5.4": {},
       "System.Windows.Extensions/4.7.0": {
         "dependencies": {
           "System.Drawing.Common": "4.7.0"
@@ -606,7 +880,7 @@
       },
       "EShop.Common/1.0.0": {
         "dependencies": {
-          "HotChocolate.Abstractions": "12.21.0",
+          "HotChocolate.Abstractions": "13.3.3",
           "Microsoft.Extensions.Identity.Core": "6.0.20"
         },
         "runtime": {
@@ -614,6 +888,14 @@
         }
       },
       "EShop.Core/1.0.0": {
+        "dependencies": {
+          "EShop.DTO": "1.0.0",
+          "EShop.Data": "1.0.0",
+          "EShop.Models": "1.0.0",
+          "HotChocolate.Abstractions": "13.3.3",
+          "Microsoft.AspNetCore.Http.Abstractions": "2.2.0",
+          "Microsoft.EntityFrameworkCore": "6.0.20"
+        },
         "runtime": {
           "EShop.Core.dll": {}
         }
@@ -627,6 +909,11 @@
         },
         "runtime": {
           "EShop.Data.dll": {}
+        }
+      },
+      "EShop.DTO/1.0.0": {
+        "runtime": {
+          "EShop.DTO.dll": {}
         }
       },
       "EShop.Models/1.0.0": {
@@ -645,40 +932,194 @@
       "serviceable": false,
       "sha512": ""
     },
-    "HotChocolate.Abstractions/12.21.0": {
+    "GreenDonut/13.3.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-77YfidtdmGEBZVUMKdyxqpwSEHnnDiwXWPU9KUlqF77RsZ6ENGcjz4g0iufMIDlc2YgkvXFEyHesSPElm6HZVg==",
-      "path": "hotchocolate.abstractions/12.21.0",
-      "hashPath": "hotchocolate.abstractions.12.21.0.nupkg.sha512"
+      "sha512": "sha512-BZ05QHuQT7pwrC9rMDh69f9NXEIGNm++K8ip528ES/m0L8ArsaDk4jhbuc//1jKxj+//tY1e6SA4c/5q9iYfpA==",
+      "path": "greendonut/13.3.3",
+      "hashPath": "greendonut.13.3.3.nupkg.sha512"
     },
-    "HotChocolate.Language/12.21.0": {
+    "HotChocolate/13.3.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-oqz1o7ssmTMBQ2Or4rFAvZqYv3A5SugwqP4+qh/TFLFs6gIl+Rihfw80sSxQoV9pDTtE5VfLmoDlWhGIWIC52Q==",
-      "path": "hotchocolate.language/12.21.0",
-      "hashPath": "hotchocolate.language.12.21.0.nupkg.sha512"
+      "sha512": "sha512-y8bU/unJo7JYWHmpuV+cq71+Iut1TJ4F2fqcW39ltLydjnUJwFB3zil+GYSlV0z3yFiF+9BqYseWk8Dm1dH9eQ==",
+      "path": "hotchocolate/13.3.3",
+      "hashPath": "hotchocolate.13.3.3.nupkg.sha512"
     },
-    "HotChocolate.Language.SyntaxTree/12.21.0": {
+    "HotChocolate.Abstractions/13.3.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-CzbzvYAbywJwYHXhBc2MXId0WoIqhjdBdSn94fOd+kTZZK/qART4PQ9emDEDuyaJgbT7G8la3YctL7ssoKks6Q==",
-      "path": "hotchocolate.language.syntaxtree/12.21.0",
-      "hashPath": "hotchocolate.language.syntaxtree.12.21.0.nupkg.sha512"
+      "sha512": "sha512-bLdjY0C9HNLO0ueHPbfpS9ePpgM5cz1IZp0OskLBWbkxCVQwT/1+OmB47rpCIHeLoORJQo8xstpSmP6iq3zhKw==",
+      "path": "hotchocolate.abstractions/13.3.3",
+      "hashPath": "hotchocolate.abstractions.13.3.3.nupkg.sha512"
     },
-    "HotChocolate.Language.Utf8/12.21.0": {
+    "HotChocolate.AspNetCore/13.3.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-8Ng8XAhiCG5H229rI6RqOr1kp1swMfSb1Oz9xDITOfc63OcEjVSHt3ur9RrN1zXdQAYDcwjNIC7A0DNtmI/GfA==",
-      "path": "hotchocolate.language.utf8/12.21.0",
-      "hashPath": "hotchocolate.language.utf8.12.21.0.nupkg.sha512"
+      "sha512": "sha512-6XfMNTGNRBM1oiEUWyetKd8s5jO9IHPl/S2CvJCiqim/RaYOPKlhkh1fJ+uAtuyfCpkM1avJ8Wkic8czunlmdQ==",
+      "path": "hotchocolate.aspnetcore/13.3.3",
+      "hashPath": "hotchocolate.aspnetcore.13.3.3.nupkg.sha512"
     },
-    "HotChocolate.Language.Visitors/12.21.0": {
+    "HotChocolate.AspNetCore.Authorization/13.3.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-tzKe6WcC30vRhn9CGv0KKzB+s3jFuTCENc4ExzSQdtV2mgJUWzQmdrlHKuCINYwz+gcDl8oY1bvmr1gt9lMdlA==",
-      "path": "hotchocolate.language.visitors/12.21.0",
-      "hashPath": "hotchocolate.language.visitors.12.21.0.nupkg.sha512"
+      "sha512": "sha512-MWDYJome5FE93doayXvLEdRfu+a1KW5OSb9s12Qws4+JWaO1vOOs2bJ6ilkxVJL3fYt2KlQn7lSLp9gNoQ5Lfw==",
+      "path": "hotchocolate.aspnetcore.authorization/13.3.3",
+      "hashPath": "hotchocolate.aspnetcore.authorization.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Authorization/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+DdaSybF1f2ku3gbbnUXeECEJ4Zg683Bcq5fuC7Ls6ohjDR/T9MPKIqyRRiPAyL5/C6DxJ70YLjeZLIongiPXw==",
+      "path": "hotchocolate.authorization/13.3.3",
+      "hashPath": "hotchocolate.authorization.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Data/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-iPzxiideDiYqB7ahe3KySfEy6Hv1544l2l4rFDLpA7oa8/ssutruzIqjDdgth8gArSm5QzSmC/hQuxeVQE/GgQ==",
+      "path": "hotchocolate.data/13.3.3",
+      "hashPath": "hotchocolate.data.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Data.EntityFramework/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FpVpPdjEsRYGdbDICppNCRmmTty/+IcxBJW6bOhlx06eL6Jcs/AZBKUtPojSrJ5Okdb/b+hPfwf/sgm3+Cu3MA==",
+      "path": "hotchocolate.data.entityframework/13.3.3",
+      "hashPath": "hotchocolate.data.entityframework.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Execution/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-5fYL6e3xIjsSjCsaqhIhIp5outH6fg4d578fyZzLjofg4FNkdKybcdK7t/n/Yup3zO2h1FDG+3TfrLpLzDQoyA==",
+      "path": "hotchocolate.execution/13.3.3",
+      "hashPath": "hotchocolate.execution.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Execution.Abstractions/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0VMRk1FOWjhZU0UHlz2NYjq1YpfME45vdPGhBXMZ8cUlGoJqGgfaULsT7GAATzhq8CWz+rprHBZOYLTETUkjkA==",
+      "path": "hotchocolate.execution.abstractions/13.3.3",
+      "hashPath": "hotchocolate.execution.abstractions.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Fetching/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G0L4TDv+PLkbAoQWkywlyLupifENLTmk7XKbfaq9ipBOA0UcW16XlBkHrz3fRJY715E4mW2urKYuSa8LaudfiA==",
+      "path": "hotchocolate.fetching/13.3.3",
+      "hashPath": "hotchocolate.fetching.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Language/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RHaFiMkP63h9JZBPKuBUfaEHYlwOfM/nx06q5NnmrsA4iQofmWglFStrHgNRXGlvXy95A0WFjRjzMzKEi5CbfQ==",
+      "path": "hotchocolate.language/13.3.3",
+      "hashPath": "hotchocolate.language.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Language.SyntaxTree/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vMxGATqvTQVMMtGY+lDV2Iua+Xi6UITPRzC53Te+AxjIircNY1ytcOH07JzHXNzXtph4JmBRf06Kz9d7o+znbg==",
+      "path": "hotchocolate.language.syntaxtree/13.3.3",
+      "hashPath": "hotchocolate.language.syntaxtree.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Language.Utf8/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-+ntioGi0mZ9qLEKo+8wyeolov0HyfOO90DpTgiq9rGlsKvQgXpW42gMx11Bmw6WWuuF49xcuxE3oMMdJrdRbVA==",
+      "path": "hotchocolate.language.utf8/13.3.3",
+      "hashPath": "hotchocolate.language.utf8.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Language.Visitors/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vGOIJuGc725mX5o0mGzNVIOAFw9B0ozYPks987fSBcQ0x2vBUCinUkfCAiuXxvUtdkGmN/ZuOmC7znnR/HclYA==",
+      "path": "hotchocolate.language.visitors/13.3.3",
+      "hashPath": "hotchocolate.language.visitors.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Language.Web/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QTFRptQ5cGDnJdLvS3GIG0+6AkA1RFj+brt7gNDzrp/ijhhWdrSfC5y6Heli4Sq2Qsazf9En/oOEHnvJA0ez/A==",
+      "path": "hotchocolate.language.web/13.3.3",
+      "hashPath": "hotchocolate.language.web.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Subscriptions/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QU70s+7ULvyqs9BU7s744ZNGhaDVDUUkv1nXMWa+EErxD5q/Rh99HRKMWSQgfRC4rK32pLemUo3JYz7Dfy72yg==",
+      "path": "hotchocolate.subscriptions/13.3.3",
+      "hashPath": "hotchocolate.subscriptions.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Subscriptions.InMemory/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oQU/2b6HHN2xguCsdsneA/Pd1Vwxjealy9WA4UqDs+gsPwZcFXEyDSl8EY3qalTi5b4+3nPeJcXbKmIQLcj9mQ==",
+      "path": "hotchocolate.subscriptions.inmemory/13.3.3",
+      "hashPath": "hotchocolate.subscriptions.inmemory.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Transport.Sockets/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QIh34nEMpkVJlgK+Ve06Y/RvHn+nUGm9maKuK24ccsP0VBkRLEKRvXXRNiru4uT9UjgrfqiVrjUz+jAJOWoxeQ==",
+      "path": "hotchocolate.transport.sockets/13.3.3",
+      "hashPath": "hotchocolate.transport.sockets.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Types/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-NdQSMFtL32ehsPdpHdTXovCx60Kw4dRT/0tutcVT15ZUaY02mtsISuSxh8oNenxT1ZlEdJ9lCSpG2rX2XyAFAg==",
+      "path": "hotchocolate.types/13.3.3",
+      "hashPath": "hotchocolate.types.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Types.CursorPagination/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lOfLvgU4LXpf9jVe8/dG2ZiS4D+JSdl6eoy6qnXhu2RXZQJT3MGBQ73JCW7ow0avZhAVg1vU7KTjDWAIKf/plA==",
+      "path": "hotchocolate.types.cursorpagination/13.3.3",
+      "hashPath": "hotchocolate.types.cursorpagination.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Types.Mutations/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-fjS20/gqQeeANxj814v73lPw7J/HAyNfMNw13tkxW2JKJ/fq8EYYBUBUAWjLsZmcgFYLR1Cx0+1ptA+dBTLMKQ==",
+      "path": "hotchocolate.types.mutations/13.3.3",
+      "hashPath": "hotchocolate.types.mutations.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Types.OffsetPagination/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-L173fJH3nptzJTiUnwv9lS8Bq7RAc06Ex1dasj6AXyZx83wBWDWYJLKSsb4Ur40ax19XE3DGhVCm8BatsOlFzw==",
+      "path": "hotchocolate.types.offsetpagination/13.3.3",
+      "hashPath": "hotchocolate.types.offsetpagination.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Types.Scalars.Upload/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-pZXXusYa0HcoVpmTJ6BUj9UeAZ58HlgesiSDK5MWMwPp/yEy7F10qK4qcsiUC6mdxWBtQZhxcE0TEfUsPC9Dbw==",
+      "path": "hotchocolate.types.scalars.upload/13.3.3",
+      "hashPath": "hotchocolate.types.scalars.upload.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Utilities/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vJHeXku+m2lI1m04IN1PR6rye8Kgnt+BanC9n+6fcaxrHE1OHJ1qzAKb0WvIRTiDoPd3XWFjAJ1uI6L//ifJ7A==",
+      "path": "hotchocolate.utilities/13.3.3",
+      "hashPath": "hotchocolate.utilities.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Utilities.Introspection/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qX1XRvLAju8TyQ4a5nfKA79ZLd50ohKX3KsLLu2Z8JgGVyhDkd1ZDFc65+mBKD7FEvlBjgwswWnWxHNViALHVQ==",
+      "path": "hotchocolate.utilities.introspection/13.3.3",
+      "hashPath": "hotchocolate.utilities.introspection.13.3.3.nupkg.sha512"
+    },
+    "HotChocolate.Validation/13.3.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zCZAknP6oIIi40eOztq/lv1Aw1ziB62TuPMsDJBMxfUAhLzdoonbcNYr7nds6dQSNrXTmEmty2qDywaxrbBNQA==",
+      "path": "hotchocolate.validation/13.3.3",
+      "hashPath": "hotchocolate.validation.13.3.3.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Cryptography.Internal/6.0.20": {
       "type": "package",
@@ -693,6 +1134,20 @@
       "sha512": "sha512-SH8DVW05YYewxRGKyZSVB9zy9rsqVtbq2MNLnW4bYlzkbOcuzv8XxVUuv+BhsV7hSsnysiHyRSQ/7QAolC6L/g==",
       "path": "microsoft.aspnetcore.cryptography.keyderivation/6.0.20",
       "hashPath": "microsoft.aspnetcore.cryptography.keyderivation.6.0.20.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Abstractions/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Nxs7Z1q3f1STfLYKJSVXCs1iBl+Ya6E8o4Oy1bCxJ/rNI44E/0f6tbsrVqAWfB7jlnJfyaAtIalBVxPKUPQb4Q==",
+      "path": "microsoft.aspnetcore.http.abstractions/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512"
+    },
+    "Microsoft.AspNetCore.Http.Features/2.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ziFz5zH8f33En4dX81LW84I6XrYXKf9jg6aM39cM+LffN9KJahViKZ61dGMSO2gd3e+qe5yBRwsesvyqlZaSMg==",
+      "path": "microsoft.aspnetcore.http.features/2.2.0",
+      "hashPath": "microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512"
     },
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore/6.0.20": {
       "type": "package",
@@ -798,6 +1253,13 @@
       "sha512": "sha512-xlzi2IYREJH3/m6+lUrQlujzX8wDitm4QGnUu6kUXTQAWPuZY8i+ticFJbzfqaetLA6KR/rO6Ew/HuYD+bxifg==",
       "path": "microsoft.extensions.dependencyinjection.abstractions/6.0.0",
       "hashPath": "microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DiagnosticAdapter/3.1.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-JiYsxaO6FnH477kGwQLZoj1+XFgwA1ZOjnmypgGhxeLdsmL4o29dP1vfOwmwsU9+nJ5ugtqq4Xs4DcVAGSLt3w==",
+      "path": "microsoft.extensions.diagnosticadapter/3.1.4",
+      "hashPath": "microsoft.extensions.diagnosticadapter.3.1.4.nupkg.sha512"
     },
     "Microsoft.Extensions.Identity.Core/6.0.20": {
       "type": "package",
@@ -925,6 +1387,13 @@
       "path": "system.collections.immutable/6.0.0",
       "hashPath": "system.collections.immutable.6.0.0.nupkg.sha512"
     },
+    "System.ComponentModel.Annotations/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-0YFqjhp/mYkDGpU0Ye1GjE53HMp9UVfGN7seGpAMttAC0C40v5gw598jCgpbBLMmCo0E5YRLBv5Z2doypO49ZQ==",
+      "path": "system.componentmodel.annotations/4.7.0",
+      "hashPath": "system.componentmodel.annotations.4.7.0.nupkg.sha512"
+    },
     "System.Configuration.ConfigurationManager/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -952,6 +1421,20 @@
       "sha512": "sha512-5tBCjAub2Bhd5qmcd0WhR5s354e4oLYa//kOWrkX+6/7ZbDDJjMTfwLSOiZ/MMpWdE4DWPLOfTLOq/juj9CKzA==",
       "path": "system.identitymodel.tokens.jwt/6.8.0",
       "hashPath": "system.identitymodel.tokens.jwt.6.8.0.nupkg.sha512"
+    },
+    "System.IO.Pipelines/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-S0L7oyWyQdVzD+5xIvcC8h44Vc+FY+qXDCLRh2+YsuBDORNphcxNX+tXR6ByLMjQ/7jDaXxsYBF6qbAr7ZIaFw==",
+      "path": "system.io.pipelines/4.7.0",
+      "hashPath": "system.io.pipelines.4.7.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1MbJTHS1lZ4bS4FmsJjnuGJOu88ZzTT2rLvrhW7Ygic+pC0NWA+3hgAen0HRdsocuQXCkUTdFn9yHJJhsijDXw==",
+      "path": "system.memory/4.5.4",
+      "hashPath": "system.memory.4.5.4.nupkg.sha512"
     },
     "System.Runtime.Caching/4.7.0": {
       "type": "package",
@@ -1009,6 +1492,34 @@
       "path": "system.text.encoding.codepages/4.7.0",
       "hashPath": "system.text.encoding.codepages.4.7.0.nupkg.sha512"
     },
+    "System.Text.Encodings.Web/6.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Vg8eB5Tawm1IFqj4TVK1czJX89rhFxJo9ELqc/Eiq0eXy13RK00eubyU6TJE6y+GQXjyV5gSfiewDUZjQgSE0w==",
+      "path": "system.text.encodings.web/6.0.0",
+      "hashPath": "system.text.encodings.web.6.0.0.nupkg.sha512"
+    },
+    "System.Text.Json/6.0.7": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-/Tf/9XjprpHolbcDOrxsKVYy/mUG/FS7aGd9YUgBVEiHeQH4kAE0T1sMbde7q6B5xcrNUsJ5iW7D1RvHudQNqA==",
+      "path": "system.text.json/6.0.7",
+      "hashPath": "system.text.json.6.0.7.nupkg.sha512"
+    },
+    "System.Threading.Channels/4.7.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gdOOXBhtt2UpTxYJm1DRmoqNfYg5ypvhzhVt0vxKhzxXFjS81r8yIOSFsJYLRa1Jc14GBAqCnjxJstO3zBN7gg==",
+      "path": "system.threading.channels/4.7.0",
+      "hashPath": "system.threading.channels.4.7.0.nupkg.sha512"
+    },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+    },
     "System.Windows.Extensions/4.7.0": {
       "type": "package",
       "serviceable": true,
@@ -1027,6 +1538,11 @@
       "sha512": ""
     },
     "EShop.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EShop.DTO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

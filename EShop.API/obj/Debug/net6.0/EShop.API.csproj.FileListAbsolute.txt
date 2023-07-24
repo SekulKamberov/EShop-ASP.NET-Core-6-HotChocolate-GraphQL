@@ -112,3 +112,5 @@ C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\HotCho
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\System.Text.Json.dll
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\EShop.Core.dll
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\EShop.Core.pdb
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\EShop.DTO.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.API\bin\Debug\net6.0\EShop.DTO.pdb

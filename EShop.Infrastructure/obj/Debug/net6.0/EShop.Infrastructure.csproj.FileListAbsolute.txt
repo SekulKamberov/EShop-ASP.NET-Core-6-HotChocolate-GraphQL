@@ -19,3 +19,5 @@ C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\ne
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Core.pdb
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Data.pdb
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.Models.pdb
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.DTO.dll
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Infrastructure\bin\Debug\net6.0\EShop.DTO.pdb

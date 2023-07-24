@@ -11,7 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
     builder.Services.AddDbContextPool<EShopDbContext>(options => 
         options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))); 
 
-builder.Services.AddIdentityExtensions();
+    builder.Services.AddIdentityExtensions();
     builder.Services.AddCustomErrorFilters();
 
     var tokenParams = builder.Services.AddTokenValidationParameters(builder.Configuration);
@@ -24,6 +24,8 @@ builder.Services.AddIdentityExtensions();
   
     builder.Services.AddGraphQLServer()
         .AddQueryType<Query>()
+        .AddSorting()
+        .AddFiltering()
         .AddAuthorization(); 
 
     var app = builder.Build();  
