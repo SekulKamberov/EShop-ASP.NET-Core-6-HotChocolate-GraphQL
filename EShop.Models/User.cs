@@ -1,13 +1,21 @@
-﻿using Microsoft.AspNetCore.Identity; 
+﻿using System.ComponentModel.DataAnnotations;
+
+using Microsoft.AspNetCore.Identity;
 
 namespace EShop.Models
 {
     public class User : IdentityUser, IBaseEntity
     {
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Gender { get; set; }
-        public string AvatarUrl { get; set; }
+        [Required]
+        public string FirstName { get; set; } = default!;
+
+        [Required]
+        public string LastName { get; set; } = default!;
+
+        [Required]
+        public string Gender { get; set; } = default!;
+
+        public string? AvatarUrl { get; set; }
 
         public bool IsActive { get; set; }
         public bool IsProfileCompleted { get; set; }

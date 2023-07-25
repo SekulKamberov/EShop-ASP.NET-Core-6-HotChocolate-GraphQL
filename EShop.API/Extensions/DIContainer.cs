@@ -1,6 +1,7 @@
 ﻿using EShop.Core.Repositories;
 using EShop.Core.Services;
 using EShop.Core.Specifications;
+using EShop.Infrastructure.Mutations;
 using EShop.Infrastructure.Repositories;
 using EShop.Infrastructure.Services;
 using EShop.Infrastructure.Specifications;
@@ -18,6 +19,8 @@ namespace EShop.API.Extensions
             services.AddScoped(typeof(ISpecification<>), typeof(BaseSpecification<>));
             services.AddScoped(typeof(IJWTService<>), typeof(JWTService<>));
             services.Configure<JWTSettings>(configuration.GetSection("JWTConfigurations"));
+            services.AddScoped<IUserMutations, UserMutations>();
+
         }
 
     }

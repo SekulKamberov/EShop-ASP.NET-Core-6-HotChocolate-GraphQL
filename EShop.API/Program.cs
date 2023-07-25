@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using EShop.API.Extensions;
 using EShop.Data;
 using EShop.Infrastructure;
+using EShop.Infrastructure.Mutations;
 
 var builder = WebApplication.CreateBuilder(args); 
 
@@ -24,6 +25,7 @@ var builder = WebApplication.CreateBuilder(args);
   
     builder.Services.AddGraphQLServer()
         .AddQueryType<Query>()
+        .AddMutationType<Mutations>()
         .AddSorting()
         .AddFiltering()
         .AddAuthorization(); 
