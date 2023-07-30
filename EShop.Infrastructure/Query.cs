@@ -1,12 +1,13 @@
-﻿using HotChocolate; 
-
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+
+using HotChocolate.Authorization;
  
 using EShop.Core.Repositories;
 using EShop.Data;
 using EShop.Infrastructure.Specifications;
 using EShop.Models;
-using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
 
 namespace EShop.Infrastructure
 {
@@ -46,13 +47,14 @@ namespace EShop.Infrastructure
             return await userRepo.ListAllEntityBySpec(new UserSpecification());
         }
 
-        //[Authorized]
+        [Authorize]
         public Task<User> GetUser(
             [Service] EShopDbContext context,
             [Service] IHttpContextAccessor contextAccessor)
         {
             var user = contextAccessor.HttpContext.User;
-            return userRepo.GetEntityBySpec(new UserSpecification(user.FindFirst(u => u.Type == "Id").Value));
+            //string id = user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString();
+            return userRepo.GetEntityBySpec(new UserSpecification(user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString()));
         }
     }
 }

@@ -212,7 +212,6 @@ namespace EShop.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Id")
-                        .IsRequired()
                         .ValueGeneratedOnAdd()
                         .HasColumnType("nvarchar(max)");
 

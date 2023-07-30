@@ -1,8 +1,11 @@
-﻿using EShop.Core.Repositories;
-using EShop.Core.Specifications;
-using EShop.Data; 
-using EShop.Infrastructure.Specifications;
+﻿using System.Linq.Expressions;
+
 using Microsoft.EntityFrameworkCore;
+
+using EShop.Data;
+using EShop.Core.Repositories;
+using EShop.Core.Specifications;
+using EShop.Infrastructure.Specifications; 
 
 namespace EShop.Infrastructure.Repositories
 {
@@ -30,9 +33,16 @@ namespace EShop.Infrastructure.Repositories
             return SpecificationEvaluator<TEntity>.EvaluateQuery(context.Set<TEntity>().AsQueryable(), spec);
         }
 
-        public Task<bool> AddEntity(TEntity entity)
-        {
-            throw new NotImplementedException();
+        public async Task<bool> AddEntity(TEntity entity)
+        { 
+            try 
+            {
+                await context.Set<TEntity>().AddAsync(entity);
+                await context.SaveChangesAsync();
+            } catch(Exception ex)  {
+                return true;
+            }
+            return true;
         }
 
         public Task<bool> UpdateEntity(TEntity entity)
@@ -43,6 +53,18 @@ namespace EShop.Infrastructure.Repositories
         public Task<bool> DeleteEntity(TEntity entity)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> DeleteAll(Expression<Func<TEntity, bool>> predicate)
+        {
+            var entitiesToDelete = context.Set<TEntity>().Where(predicate).AsQueryable();
+            if(entitiesToDelete.Any())
+            {
+                context.Set<TEntity>().RemoveRange(entitiesToDelete);
+                return await context.SaveChangesAsync() > 0;
+            }
+            else { return false; }
+            
         }
     }
 }

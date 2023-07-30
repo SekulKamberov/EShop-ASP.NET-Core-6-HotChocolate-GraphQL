@@ -107,7 +107,9 @@ namespace EShop.Infrastructure.Services
                      StringComparison.InvariantCultureIgnoreCase);
         }
 
-        public async Task<AuthenticationResult> GetToken(TEntity Entity, [Service] UserManager<TEntity> _userManager)
+        public async Task<AuthenticationResult> GetToken(
+            TEntity Entity, 
+            [Service] UserManager<TEntity> _userManager)
         {
             var authClaims = new List<Claim>
             {
@@ -139,7 +141,10 @@ namespace EShop.Infrastructure.Services
             };
             await _tokenRepository.AddEntity(refreshToken);
 
-            return new AuthenticationResult { Token = new JwtSecurityTokenHandler().WriteToken(token), RefreshToken = refreshToken.RefreshToken };
+            return new AuthenticationResult { 
+                Token = new JwtSecurityTokenHandler().WriteToken(token), 
+                RefreshToken = refreshToken.RefreshToken 
+            };
         }
     }
 }

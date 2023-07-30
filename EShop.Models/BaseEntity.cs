@@ -8,7 +8,7 @@ namespace EShop.Models
            a value is first added to the database. Thereafter, the property will not be included in 
            UPDATE statements by Entity Framework.*/
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public string Id { get; set; }
+        public string? Id { get; set; }
         public DateTime CreatedAt { get; set; }
         public DateTime UpdatedAt { get; set; }
     }

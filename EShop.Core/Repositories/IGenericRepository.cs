@@ -1,9 +1,6 @@
-﻿using EShop.Core.Specifications;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Linq.Expressions;
+
+using EShop.Core.Specifications;
 
 namespace EShop.Core.Repositories
 {
@@ -14,8 +11,6 @@ namespace EShop.Core.Repositories
         Task<bool> AddEntity(TEntity entity);
         Task<bool> UpdateEntity(TEntity entity);
         Task<bool> DeleteEntity(TEntity entity);
-
-
-
+        Task<bool> DeleteAll(Expression<Func<TEntity, bool>> predicate);  
     }
 }
