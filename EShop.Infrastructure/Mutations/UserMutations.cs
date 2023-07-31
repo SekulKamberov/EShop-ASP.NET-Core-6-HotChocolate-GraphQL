@@ -7,9 +7,10 @@ using Microsoft.Extensions.DependencyInjection;
 using EShop.Data;
 using EShop.DTO.UsersDtos;
 using EShop.Infrastructure.Services;
+using HotChocolate.Authorization;
+
 using EShop.Models;
 using EShop.DTO.Common;
-using HotChocolate.Authorization;
 using EShop.DTO.Users;
 using EShop.DTO;
 
@@ -69,12 +70,10 @@ namespace EShop.Infrastructure.Mutations
             )
         {
             User user = await userManager.FindByIdAsync(input.Id);
-            var result = await userManager.DeleteAsync(user);
 
-            if (!result.Succeeded)
-            {
-                throw new IdentityException { Errors = result.Errors };
-            }
+            var result = await userManager.DeleteAsync(user); 
+            if (!result.Succeeded) 
+                throw new IdentityException { Errors = result.Errors }; 
 
             await context.SaveChangesAsync(cancellationtoken);
 

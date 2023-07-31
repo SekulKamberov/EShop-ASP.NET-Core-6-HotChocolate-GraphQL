@@ -45,14 +45,16 @@ namespace EShop.Infrastructure.Repositories
             return true;
         }
 
-        public Task<bool> UpdateEntity(TEntity entity)
+        public async Task<bool> UpdateEntity(TEntity entity)
         {
-            throw new NotImplementedException();
+            context.Set<TEntity>().Update(entity);
+              return await context.SaveChangesAsync() > 0;
         }
 
-        public Task<bool> DeleteEntity(TEntity entity)
+        public async Task<bool> DeleteEntity(TEntity entity)
         {
-            throw new NotImplementedException();
+            context.Set<TEntity>().Remove(entity);
+              return await context.SaveChangesAsync() > 0;
         }
 
         public async Task<bool> DeleteAll(Expression<Func<TEntity, bool>> predicate)

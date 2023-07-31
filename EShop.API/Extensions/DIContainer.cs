@@ -20,6 +20,7 @@ namespace EShop.API.Extensions
             services.AddScoped(typeof(IJWTService<>), typeof(JWTService<>));
             services.Configure<JWTSettings>(configuration.GetSection("JWTConfigurations"));
             services.AddScoped<IUserMutations, UserMutations>();
+            services.AddScoped<IProductCategoryMutations, ProductCategoryMutations>();
 
         }
 
