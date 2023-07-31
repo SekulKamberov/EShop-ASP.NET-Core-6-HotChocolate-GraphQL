@@ -1,13 +1,8 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Collections.Generic;
-
-using Microsoft.EntityFrameworkCore; 
+﻿using Microsoft.EntityFrameworkCore; 
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 using EShop.Models;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 
 namespace EShop.Data.Configurations
 {
@@ -23,11 +18,11 @@ namespace EShop.Data.Configurations
 
             builder.HasMany(cart => cart.CartProducts)
                     .WithOne(cartProducts => cartProducts.Cart)
-                    .OnDelete(DeleteBehavior.NoAction);
+                    .OnDelete(DeleteBehavior.Cascade);
 
             builder.HasMany(cart => cart.Orders)
                     .WithOne(orders => orders.Cart)
-                    .OnDelete(DeleteBehavior.NoAction);
+                    .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

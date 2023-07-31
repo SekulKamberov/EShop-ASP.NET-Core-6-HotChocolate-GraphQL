@@ -1,5 +1,10 @@
-﻿using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection; 
+﻿using System.Security.Claims;
+
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.Extensions.DependencyInjection;
+
+using HotChocolate.Authorization;
 
 using EShop.Data;
 using EShop.Models; 
@@ -9,7 +14,8 @@ using EShop.DTO.UsersDtos;
 using EShop.Core.Services;
 using EShop.DTO.Category;
 using EShop.DTO.Store;
-
+using EShop.DTO.Cart;
+  
 namespace EShop.Infrastructure.Mutations
 {
     public class Mutations
@@ -17,12 +23,14 @@ namespace EShop.Infrastructure.Mutations
         private readonly IUserMutations userMutations;
         private readonly IProductCategoryMutations productCategoryMutations;
         private readonly IStoreMutations storeMutations;
+        private readonly ICartMutations cartMutations;
 
         public Mutations(IServiceProvider serviceProvider)
         {
             userMutations = serviceProvider.GetRequiredService<IUserMutations>();
             productCategoryMutations = serviceProvider.GetRequiredService<IProductCategoryMutations>();
             storeMutations = serviceProvider.GetRequiredService<IStoreMutations>();
+            cartMutations = serviceProvider.GetRequiredService<ICartMutations>();
         }
 
         public async Task<UserPayload> AddUserAsync(
@@ -85,5 +93,37 @@ namespace EShop.Infrastructure.Mutations
             [Service] EShopDbContext context)
                 => await storeMutations.UpdateStore(input, context);
 
+        [Authorize]
+        public async Task<CartPayload> AddCart(
+            AddCartInput input,
+            [Service] EShopDbContext context,
+            [Service] IHttpContextAccessor contextAccessor)
+        {
+            var user = contextAccessor.HttpContext.User;
+            return await cartMutations.AddCart(input, context, 
+                user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString());
+        }
+
+        [Authorize]
+        public async Task<CartPayload> DeleteCart(
+            DeleteInput input,
+            [Service] EShopDbContext context,
+            [Service] IHttpContextAccessor contextAccessor)
+        {
+            var user = contextAccessor.HttpContext.User;
+            return await cartMutations.DeleteCart(input, context,
+                user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString());
+        }
+
+        [Authorize]
+        public async Task<CartPayload> UpdateCart(
+            UpdateCartInput input,
+            [Service] EShopDbContext context,
+            [Service] IHttpContextAccessor contextAccessor)
+        {
+            var user = contextAccessor.HttpContext.User;
+            return await cartMutations.UpdateCart(input, context,
+                user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString());
+        }
     }
 }

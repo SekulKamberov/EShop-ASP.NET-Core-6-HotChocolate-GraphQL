@@ -52,9 +52,15 @@ namespace EShop.Infrastructure.Repositories
         }
 
         public async Task<bool> DeleteEntity(TEntity entity)
-        {
-            context.Set<TEntity>().Remove(entity);
-              return await context.SaveChangesAsync() > 0;
+        {  
+            try
+            {
+                context.Set<TEntity>().Remove(entity);
+                return await context.SaveChangesAsync() > 0;
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message.ToString()); }
+            return false;
+
         }
 
         public async Task<bool> DeleteAll(Expression<Func<TEntity, bool>> predicate)
@@ -65,8 +71,18 @@ namespace EShop.Infrastructure.Repositories
                 context.Set<TEntity>().RemoveRange(entitiesToDelete);
                 return await context.SaveChangesAsync() > 0;
             }
-            else { return false; }
-            
+            else { return false; } 
+        }
+
+        public async Task<bool> AddRangeAsync(ICollection<TEntity> entities)
+        {
+            try
+            {
+                context.AddRange(entities);
+                return await context.SaveChangesAsync() > 0;
+            }
+            catch(Exception ex) { Console.WriteLine(ex.Message.ToString()); }
+            return false;
         }
     }
 }

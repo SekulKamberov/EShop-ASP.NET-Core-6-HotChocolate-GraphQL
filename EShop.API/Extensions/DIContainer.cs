@@ -18,10 +18,13 @@ namespace EShop.API.Extensions
             services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddScoped(typeof(ISpecification<>), typeof(BaseSpecification<>));
             services.AddScoped(typeof(IJWTService<>), typeof(JWTService<>));
+
             services.Configure<JWTSettings>(configuration.GetSection("JWTConfigurations"));
+            
             services.AddScoped<IUserMutations, UserMutations>();
             services.AddScoped<IProductCategoryMutations, ProductCategoryMutations>();
-            services.AddScoped<IStoreMutations, StoreMutations>(); 
+            services.AddScoped<IStoreMutations, StoreMutations>();
+            services.AddScoped<ICartMutations, CartMutations>(); 
         }
 
     }

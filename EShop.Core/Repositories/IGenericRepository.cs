@@ -11,6 +11,7 @@ namespace EShop.Core.Repositories
         Task<bool> AddEntity(TEntity entity);
         Task<bool> UpdateEntity(TEntity entity);
         Task<bool> DeleteEntity(TEntity entity);
-        Task<bool> DeleteAll(Expression<Func<TEntity, bool>> predicate);  
+        Task<bool> DeleteAll(Expression<Func<TEntity, bool>> predicate);
+        Task<bool> AddRangeAsync(ICollection<TEntity> entities);
     }
 }
