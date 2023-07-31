@@ -8,6 +8,7 @@ using EShop.DTO.Users;
 using EShop.DTO.UsersDtos;
 using EShop.Core.Services;
 using EShop.DTO.Category;
+using EShop.DTO.Store;
 
 namespace EShop.Infrastructure.Mutations
 {
@@ -15,11 +16,13 @@ namespace EShop.Infrastructure.Mutations
     {
         private readonly IUserMutations userMutations;
         private readonly IProductCategoryMutations productCategoryMutations;
+        private readonly IStoreMutations storeMutations;
 
         public Mutations(IServiceProvider serviceProvider)
         {
             userMutations = serviceProvider.GetRequiredService<IUserMutations>();
             productCategoryMutations = serviceProvider.GetRequiredService<IProductCategoryMutations>();
+            storeMutations = serviceProvider.GetRequiredService<IStoreMutations>();
         }
 
         public async Task<UserPayload> AddUserAsync(
@@ -66,6 +69,21 @@ namespace EShop.Infrastructure.Mutations
             UpdateCategoryInput input,
             [Service] EShopDbContext context)
                 => await productCategoryMutations.UpdateCategory(input, context);
+
+        public async Task<StorePayload> AddStore(
+            AddStoreInput input,
+            [Service] EShopDbContext context)
+                => await storeMutations.AddStore(input, context);
+
+        public async Task<StorePayload> DeleteStore(
+            DeleteInput input,
+            [Service] EShopDbContext context)       
+                => await storeMutations.DeleteStore(input, context);
+
+        public async Task<StorePayload> UpdateStore(
+            UpdateStoreInput input,
+            [Service] EShopDbContext context)
+                => await storeMutations.UpdateStore(input, context);
 
     }
 }
