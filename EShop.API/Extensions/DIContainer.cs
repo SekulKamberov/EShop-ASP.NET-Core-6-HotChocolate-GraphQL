@@ -23,9 +23,10 @@ namespace EShop.API.Extensions
             
             services.AddScoped<IUserMutations, UserMutations>();
             services.AddScoped<IProductCategoryMutations, ProductCategoryMutations>();
+            services.AddScoped<IProductMutations, ProductMutations>();
             services.AddScoped<IStoreMutations, StoreMutations>();
             services.AddScoped<ICartMutations, CartMutations>(); 
-        }
-
+            services.AddScoped<IOrderMutations, OrderMutations>();  
+        } 
     }
 }
