@@ -17,14 +17,8 @@ namespace EShop.DTO.UsersDtos
         public string Password { get; set; } = default!;
 
         [Required]
-        public string Gender { get; set; } = default!;  
+        public string Gender { get; set; } = default!;   
 
-        public string UserName
-        {
-            get { return Email; }
-            set { }
-        }
-
-        public string? AvatarUrl { get; set; }
+        public string? Avatar { get; set; }
     }
 }

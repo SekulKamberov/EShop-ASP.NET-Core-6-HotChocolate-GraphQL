@@ -12,5 +12,7 @@ namespace EShop.DTO.Store
 
         [Required]
         public string Description { get; set; }
+        public string AvatarUrl { get; set; }
+        public string Address { get; set; }
     }
 }

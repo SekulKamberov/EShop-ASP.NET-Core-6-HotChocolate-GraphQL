@@ -1,14 +1,14 @@
-﻿using EShop.Core.Services;
-using Microsoft.AspNetCore.Identity;
-using EShop.Common.CustomException;
-using EShop.Core.Repositories;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 
-using EShop.Data;
-using EShop.DTO.UsersDtos;
-using EShop.Infrastructure.Services;
 using HotChocolate.Authorization;
 
+using EShop.Core.Services; 
+using EShop.Common.CustomException;
+using EShop.Core.Repositories;
+  
+using EShop.Data;
+using EShop.DTO.UsersDtos; 
 using EShop.Models;
 using EShop.DTO.Common;
 using EShop.DTO.Users;
@@ -31,7 +31,8 @@ namespace EShop.Infrastructure.Mutations
             AddUserInput input, 
             [Service(ServiceKind.Default)] 
             EShopDbContext context, 
-            [Service(ServiceKind.Default)] UserManager<User> userManager, 
+            [Service(ServiceKind.Default)] UserManager<User> userManager,
+            [Service(ServiceKind.Default)] RoleManager<IdentityRole> roleManager,
             CancellationToken cancellationtoken)
         {
             var User = new User
@@ -39,16 +40,34 @@ namespace EShop.Infrastructure.Mutations
                 Email = input.Email,
                 FirstName = input.FirstName,
                 LastName = input.LastName,
-                UserName = input.UserName,
+                UserName = input.Email,  
                 Gender = input.Gender,
-                AvatarUrl = input.AvatarUrl
+                AvatarUrl = input.Avatar
             };
 
             var result = await userManager.CreateAsync(User, input.Password);
             if (!result.Succeeded) 
-                throw new IdentityException { Errors = result.Errors }; 
+                throw new IdentityException { Errors = result.Errors };
 
-            await context.SaveChangesAsync(cancellationtoken);
+            var userRoles = await userManager.GetRolesAsync(User);
+
+            bool adminRoleExists = await roleManager.RoleExistsAsync("Admin");
+            if (!adminRoleExists)
+            {
+                var role = await roleManager.CreateAsync(new IdentityRole("Admin"));
+                if (role.Succeeded)
+                {
+                    if (User.Email == "se4ko@gmail.com")
+                        await userManager.AddToRoleAsync(User, "Admin");
+                }
+
+            }
+            else
+            {
+                if (User.Email == "se4ko@gmail.com")
+                    await userManager.AddToRoleAsync(User, "Admin");
+            }
+                await context.SaveChangesAsync(cancellationtoken);
 
             return new UserPayload { 
                 Email = User.Email, 
@@ -57,7 +76,7 @@ namespace EShop.Infrastructure.Mutations
                 LastName = User.LastName, 
                 UserName = User.UserName,
                 Gender = User.Gender,
-                AvatarUrl = User.AvatarUrl
+                Avatar = User.AvatarUrl
             };
         }
 
@@ -104,11 +123,18 @@ namespace EShop.Infrastructure.Mutations
                 }
 
                 await tokenRepository.DeleteAll(tokens => tokens.UserId == user.Id);
+
                 AuthenticationResult token = await jwtService.GetToken(user, userManager);
 
                 response.TokenData = token;
                 response.Message = "Successful";
                 response.Email = user.Email;
+                response.Id = user.Id;
+                response.FirstName = user.FirstName;
+                response.LastName = user.LastName;
+                response.UserName = user.UserName;
+                response.Gender = user.Gender;
+                response.Avatar = user.AvatarUrl;
                 return response;
             }
 

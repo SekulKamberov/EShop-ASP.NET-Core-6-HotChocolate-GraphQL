@@ -27,7 +27,10 @@ namespace EShop.Infrastructure.Mutations
             {
                 Name = input.Name,
                 Description = input.Description,
-                PhoneNumber = input.PhoneNumber
+                PhoneNumber = input.PhoneNumber,
+                Address = input.Address,
+                AvatarUrl = input.AvatarUrl,
+                CreatedAt = DateTime.UtcNow
             };
 
             var result = await storeRepository.AddEntity(store);
@@ -39,11 +42,13 @@ namespace EShop.Infrastructure.Mutations
                 Id = store.Id,
                 Name = store.Name,
                 PhoneNumber = store.PhoneNumber,
-                Description = store.Description
+                Description = store.Description,
+                Address = input.Address,
+                AvatarUrl = input.AvatarUrl
             };
         }
 
-        public async Task<StorePayload> DeleteStore(DeleteInput input, EShopDbContext context)
+        public async Task<bool> DeleteStore(DeleteInput input, EShopDbContext context)
         {
             Store store = await storeRepository.GetEntityBySpec(new StoreSpecification(input.Id));
             if (store is null)
@@ -53,13 +58,7 @@ namespace EShop.Infrastructure.Mutations
             if (!result)
                 throw new ModelExceptions() { DefaultError = $"The store could not be deleted" };
 
-            return new StorePayload
-            {
-                Id = store.Id,
-                Name = store.Name,
-                PhoneNumber = store.PhoneNumber,
-                Description = store.Description
-            };
+            return true;
         }
 
         public async Task<StorePayload> UpdateStore(UpdateStoreInput input, EShopDbContext context)
@@ -70,6 +69,8 @@ namespace EShop.Infrastructure.Mutations
 
             store.PhoneNumber = input.PhoneNumber is null ? store.PhoneNumber : input.PhoneNumber;
             store.Description = input.Description is null ? store.Description : input.Description;
+            store.Address = input.Address is null ? store.Address : input.Address;
+            store.AvatarUrl = input.AvatarUrl is null ? store.AvatarUrl : input.AvatarUrl;
 
 
             var result = await storeRepository.UpdateEntity(store);
@@ -81,7 +82,9 @@ namespace EShop.Infrastructure.Mutations
                 Id = store.Id,
                 Name = store.Name,
                 PhoneNumber = store.PhoneNumber,
-                Description = store.Description
+                Description = store.Description,
+                Address = input.Address,
+                AvatarUrl = input.AvatarUrl
             };
         }
     }

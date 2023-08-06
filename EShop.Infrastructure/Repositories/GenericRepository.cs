@@ -18,7 +18,8 @@ namespace EShop.Infrastructure.Repositories
             context = _context;
         } 
 
-        public async Task<IReadOnlyList<TEntity>> ListAllEntityBySpec(ISpecification<TEntity> spec)
+        public async Task<IReadOnlyList<TEntity>> ListAllEntityBySpec( 
+            ISpecification<TEntity> spec)
         {
             return await ApplySpecification(spec).ToListAsync();
         } 

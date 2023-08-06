@@ -42,9 +42,10 @@ namespace EShop.Infrastructure.Mutations
         public async Task<UserPayload> AddUserAsync(
             AddUserInput input, 
             [Service] EShopDbContext context, 
-            [Service] UserManager<User> userManager, 
+            [Service] UserManager<User> userManager,
+            [Service] RoleManager<IdentityRole> roleManager,
             CancellationToken cancellationtoken) 
-                => await userMutations.AddUserAsync(input, context, userManager, cancellationtoken);
+                => await userMutations.AddUserAsync(input, context, userManager, roleManager, cancellationtoken);
         
 
         public async Task<UserPayload> DeleteUserAsync(
@@ -102,7 +103,7 @@ namespace EShop.Infrastructure.Mutations
             [Service] EShopDbContext context)
                 => await storeMutations.AddStore(input, context);
 
-        public async Task<StorePayload> DeleteStore(
+        public async Task<bool> DeleteStore(
             DeleteInput input,
             [Service] EShopDbContext context)       
                 => await storeMutations.DeleteStore(input, context);

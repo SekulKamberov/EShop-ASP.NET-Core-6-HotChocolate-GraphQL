@@ -33,7 +33,7 @@ namespace EShop.Infrastructure.Services
         }
 
         public async Task<AuthenticationResult> GetRefreshToken(
-            RefreshTokenInput oldToken, 
+            RefreshTokenInput oldToken,
             [Service] UserManager<TEntity> _userManager)
         {
             AuthenticationResult result = new AuthenticationResult();
@@ -108,7 +108,7 @@ namespace EShop.Infrastructure.Services
         }
 
         public async Task<AuthenticationResult> GetToken(
-            TEntity Entity, 
+            TEntity Entity,
             [Service] UserManager<TEntity> _userManager)
         {
             var authClaims = new List<Claim>
@@ -122,7 +122,7 @@ namespace EShop.Infrastructure.Services
 
             foreach (var role in userRoles)
             {
-                authClaims.Add(new Claim(ClaimTypes.Role, role));
+                authClaims.Add(new Claim("role", role));
             }
 
             var authSignInKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["JWTConfigurations:SecretKey"]));
@@ -141,9 +141,10 @@ namespace EShop.Infrastructure.Services
             };
             await _tokenRepository.AddEntity(refreshToken);
 
-            return new AuthenticationResult { 
-                Token = new JwtSecurityTokenHandler().WriteToken(token), 
-                RefreshToken = refreshToken.RefreshToken 
+            return new AuthenticationResult
+            {
+                Token = new JwtSecurityTokenHandler().WriteToken(token),
+                RefreshToken = refreshToken.RefreshToken
             };
         }
     }

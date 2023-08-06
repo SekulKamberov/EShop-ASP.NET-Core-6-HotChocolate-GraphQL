@@ -1,4 +1,5 @@
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\bin\Debug\net6.0\EShop.Data.deps.json
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\bin\Debug\net6.0\EShop.Data.runtimeconfig.json
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\bin\Debug\net6.0\EShop.Data.dll
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\bin\Debug\net6.0\EShop.Data.pdb
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\bin\Debug\net6.0\EShop.Models.dll
@@ -12,6 +13,5 @@ C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\obj\Debug\net6.0\EShop
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\obj\Debug\net6.0\EShop.Data.dll
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\obj\Debug\net6.0\refint\EShop.Data.dll
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\obj\Debug\net6.0\EShop.Data.pdb
-C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\obj\Debug\net6.0\ref\EShop.Data.dll
-C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\bin\Debug\net6.0\EShop.Data.runtimeconfig.json
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\obj\Debug\net6.0\EShop.Data.genruntimeconfig.cache
+C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.Data\obj\Debug\net6.0\ref\EShop.Data.dll

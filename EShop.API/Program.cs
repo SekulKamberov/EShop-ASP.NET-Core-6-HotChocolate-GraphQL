@@ -5,6 +5,7 @@ using EShop.Data;
 using EShop.Infrastructure;
 using EShop.Infrastructure.Mutations;
 
+var myAllowSpecificOrigins = "_myAllowSpecificOrigins";
 var builder = WebApplication.CreateBuilder(args); 
 
     builder.Services.AddControllers(); 
@@ -17,7 +18,16 @@ var builder = WebApplication.CreateBuilder(args);
 
     var tokenParams = builder.Services.AddTokenValidationParameters(builder.Configuration);
 
-    builder.Services.AddCors();
+    builder.Services.AddCors(options =>
+    {
+        options.AddPolicy(name: myAllowSpecificOrigins,
+            policy =>
+            {
+                policy.WithOrigins("http://localhost:3000")  
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+            });
+});
 
     builder.Services.AddServiceRegisterations(builder.Configuration);
     builder.Services.AddJWTAuthentication(tokenParams);
@@ -40,6 +50,8 @@ var builder = WebApplication.CreateBuilder(args);
     //}
 
     app.UseRouting();
+
+    app.UseCors(myAllowSpecificOrigins);
 
     app.UseAuthentication();
     app.UseAuthorization();

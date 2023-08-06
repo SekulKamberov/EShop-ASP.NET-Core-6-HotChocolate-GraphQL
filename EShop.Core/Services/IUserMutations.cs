@@ -15,7 +15,8 @@ namespace EShop.Core.Services
         Task<UserPayload> AddUserAsync(
             AddUserInput input, 
             [Service] EShopDbContext context, 
-            [Service] UserManager<User> userManager, 
+            [Service] UserManager<User> userManager,
+            [Service] RoleManager<IdentityRole> roleManager,
             CancellationToken cancellationtoken);
 
         Task<UserPayload> DeleteUserAsync(
