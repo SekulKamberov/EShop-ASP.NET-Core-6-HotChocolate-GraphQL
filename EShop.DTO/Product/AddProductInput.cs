@@ -15,5 +15,8 @@ namespace EShop.DTO.Product
 
         [Required]
         public string StoreId { get; set; }
+
+        [Required]
+        public string AvatarUrl { get; set; }
     }
 }

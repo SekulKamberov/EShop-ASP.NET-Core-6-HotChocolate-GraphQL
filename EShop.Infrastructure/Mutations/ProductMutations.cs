@@ -40,7 +40,8 @@ namespace EShop.Infrastructure.Mutations
                 CategoryId = input.CategoryId,
                 StoreId = input.StoreId,
                 Name = input.Name,
-                Price = input.Price
+                Price = input.Price,
+                AvatarUrl = input.AvatarUrl
             };
 
             var result = await productRepository.AddEntity(product);
@@ -51,7 +52,8 @@ namespace EShop.Infrastructure.Mutations
             {
                 Id = product.Id,
                 Name = product.Name,
-                Price = product.Price
+                Price = product.Price,
+                AvatarUrl = input.AvatarUrl
             };
         } 
 
@@ -66,6 +68,7 @@ namespace EShop.Infrastructure.Mutations
             product.Name = input.Name is null ? product.Name : input.Name;
             product.Price = input.Price is 0 ? product.Price : input.Price;
             product.CategoryId = input.CategoryId is null ? product.CategoryId : input.CategoryId;
+            product.AvatarUrl = input.AvatarUrl is null ? product.AvatarUrl : input.AvatarUrl;
 
             var result = await productRepository.UpdateEntity(product);
             if (!result)
@@ -75,7 +78,8 @@ namespace EShop.Infrastructure.Mutations
             {
                 Id = product.Id,
                 Name = product.Name,
-                Price = product.Price
+                Price = product.Price,
+                AvatarUrl = product.AvatarUrl
             };
         }
 
@@ -96,7 +100,8 @@ namespace EShop.Infrastructure.Mutations
             {
                 Id = product.Id,
                 Name = product.Name,
-                Price = product.Price
+                Price = product.Price,
+                AvatarUrl = product.AvatarUrl
             };
         }
     }

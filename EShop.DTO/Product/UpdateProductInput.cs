@@ -9,5 +9,6 @@
         public string CategoryId { get; set; }
 
         public decimal Price { get; set; }
+        public string AvatarUrl { get; set; }
     }
 }
