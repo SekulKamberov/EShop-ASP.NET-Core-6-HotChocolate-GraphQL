@@ -9,5 +9,6 @@ namespace EShop.DTO.Common
     public class DeleteInput
     {
         public string Id { get; set; }
+        public string? UserId { get; set; }
     }
 }

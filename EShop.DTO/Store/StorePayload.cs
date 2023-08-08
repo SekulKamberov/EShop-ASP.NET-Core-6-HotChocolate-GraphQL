@@ -14,5 +14,6 @@ namespace EShop.DTO.Store
         public string? Description { get; set; }
         public string? AvatarUrl { get; set; }
         public string? Address { get; set; }
+        public string UserId { get; set; }
     }
 }

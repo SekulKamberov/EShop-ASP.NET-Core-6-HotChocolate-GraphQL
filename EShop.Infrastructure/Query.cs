@@ -33,12 +33,15 @@ namespace EShop.Infrastructure
             return await productRepo.ListAllEntityBySpec(new ProductSpecification());
         }
 
+        [Authorize]
         [UseSorting]
         [UseFiltering]
-        public async Task<IReadOnlyList<Store>> GetStoresAsync([Service] EShopDbContext context)
-        {
-            return await storeRepo.ListAllEntityBySpec(new StoreSpecification());
-        }
+        public async Task<IReadOnlyList<Store>> GetStoresAsync(
+            [Service] EShopDbContext context,
+            [Service] IHttpContextAccessor contextAccessor)
+        { 
+            return await storeRepo.ListAllEntityBySpec(new StoreByUserSpecification(GetUserId(contextAccessor)));
+        } 
 
         [UseSorting]
         [UseFiltering]
@@ -56,5 +59,10 @@ namespace EShop.Infrastructure
             //string id = user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString();
             return userRepo.GetEntityBySpec(new UserSpecification(user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString()));
         }
+
+        private static string GetUserId(IHttpContextAccessor contextAccessor)
+            => contextAccessor.HttpContext.User.Claims
+                .FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier)
+                .Value.ToString();
     }
 }

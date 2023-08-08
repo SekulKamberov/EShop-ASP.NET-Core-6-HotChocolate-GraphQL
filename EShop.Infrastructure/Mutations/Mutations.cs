@@ -46,8 +46,8 @@ namespace EShop.Infrastructure.Mutations
             [Service] RoleManager<IdentityRole> roleManager,
             CancellationToken cancellationtoken) 
                 => await userMutations.AddUserAsync(input, context, userManager, roleManager, cancellationtoken);
-        
 
+        [Authorize]
         public async Task<UserPayload> DeleteUserAsync(
             DeleteInput input, 
             [Service] EShopDbContext context, 
@@ -60,14 +60,16 @@ namespace EShop.Infrastructure.Mutations
             [Service] EShopDbContext context,
             [Service] UserManager<User> userManager)
                 => await userMutations.LoginUserAsync(input, context, userManager);
-        
+
+        [Authorize]
         public async Task<UserPayload> UpdateUserAsync(
             UpdateUserInput input,
             [Service] EShopDbContext context,
             [Service] UserManager<User> userManager,
             CancellationToken cancellationtoken) 
-                => await userMutations.UpdateUserAsync(input, context, userManager, cancellationtoken); 
+                => await userMutations.UpdateUserAsync(input, context, userManager, cancellationtoken);
 
+        [Authorize]
         public async Task<CategoryPayload> AddCategory(
             AddCategoryInput input,
             [Service] EShopDbContext context) 
@@ -78,16 +80,19 @@ namespace EShop.Infrastructure.Mutations
             [Service] EShopDbContext context)
                 => await productCategoryMutations.DeleteCategory(input, context);
 
+        [Authorize]
         public async Task<CategoryPayload> UpdateCategory(
             UpdateCategoryInput input,
             [Service] EShopDbContext context)
                 => await productCategoryMutations.UpdateCategory(input, context);
 
+        [Authorize]
         public async Task<ProductPayload> AddProduct(
             AddProductInput input,
             [Service] EShopDbContext context)
                 => await productMutations.AddProduct(input, context);
 
+        [Authorize]
         public async Task<ProductPayload> UpdateProduct(
             UpdateProductInput input,
             [Service] EShopDbContext context)
@@ -98,16 +103,20 @@ namespace EShop.Infrastructure.Mutations
             [Service] EShopDbContext context)
                 => await productMutations.DeleteProduct(input, context);
 
+        [Authorize]
         public async Task<StorePayload> AddStore(
-            AddStoreInput input,
-            [Service] EShopDbContext context)
-                => await storeMutations.AddStore(input, context);
+            AddStoreInput input, 
+            [Service] EShopDbContext context,
+              [Service] IHttpContextAccessor contextAccessor)
+                => await storeMutations.AddStore(input, context, contextAccessor);
 
+        [Authorize]
         public async Task<bool> DeleteStore(
             DeleteInput input,
             [Service] EShopDbContext context)       
                 => await storeMutations.DeleteStore(input, context);
 
+        [Authorize]
         public async Task<StorePayload> UpdateStore(
             UpdateStoreInput input,
             [Service] EShopDbContext context)

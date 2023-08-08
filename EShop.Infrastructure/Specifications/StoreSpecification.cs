@@ -7,6 +7,6 @@ namespace EShop.Infrastructure.Specifications
         public StoreSpecification() { }
 
         public StoreSpecification(string Id) 
-            : base(x => x.Id == Id) {  }
+            : base(x => x.Id == Id) {  } 
     }
 }

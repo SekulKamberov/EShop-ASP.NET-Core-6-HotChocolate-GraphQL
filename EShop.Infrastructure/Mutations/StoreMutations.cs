@@ -8,6 +8,8 @@ using EShop.Core.Services;
 using EShop.Core.Repositories; 
 using EShop.Common.CustomException;
 using EShop.Infrastructure.Specifications;
+using Microsoft.AspNetCore.Http;
+using System.Security.Claims;
 
 namespace EShop.Infrastructure.Mutations
 {
@@ -18,11 +20,15 @@ namespace EShop.Infrastructure.Mutations
         public StoreMutations(IServiceProvider serviceProvider)
                 => storeRepository = serviceProvider.GetRequiredService<IGenericRepository<Store>>();
 
-        public async Task<StorePayload> AddStore(AddStoreInput input, EShopDbContext context)
+        public async Task<StorePayload> AddStore(
+            AddStoreInput input, 
+            EShopDbContext context,
+            IHttpContextAccessor contextAccessor)
         {
             if (await storeRepository.GetEntityBySpec(new StoreCheckSpecification(input.Name)) != null)
                 throw new ModelExceptions() { DefaultError = $"The name {input.Name} is not available" };
 
+            var userId = GetUserId(contextAccessor);
             Store store = new Store
             {
                 Name = input.Name,
@@ -30,7 +36,8 @@ namespace EShop.Infrastructure.Mutations
                 PhoneNumber = input.PhoneNumber,
                 Address = input.Address,
                 AvatarUrl = input.AvatarUrl,
-                CreatedAt = DateTime.UtcNow
+                CreatedAt = DateTime.UtcNow,
+                UserId = userId
             };
 
             var result = await storeRepository.AddEntity(store);
@@ -87,5 +94,10 @@ namespace EShop.Infrastructure.Mutations
                 AvatarUrl = input.AvatarUrl
             };
         }
+
+        private static string GetUserId(IHttpContextAccessor contextAccessor)
+            => contextAccessor.HttpContext.User.Claims
+                .FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier)
+                .Value.ToString();
     }
 }
