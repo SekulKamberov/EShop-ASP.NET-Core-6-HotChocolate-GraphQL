@@ -8,6 +8,7 @@ using EShop.Data;
 using EShop.Infrastructure.Specifications;
 using EShop.Models;
 using System.Security.Claims;
+using Microsoft.EntityFrameworkCore;
 
 namespace EShop.Infrastructure
 {
@@ -33,6 +34,13 @@ namespace EShop.Infrastructure
             return await productRepo.ListAllEntityBySpec(new ProductSpecification());
         }
 
+        [UseSorting]
+        [UseFiltering]
+        public async Task<IReadOnlyList<ProductCategory>> GetCategoriesAsync([Service] EShopDbContext context)
+        {
+            return await categoryRepo.ListAllEntityBySpec(new CategorySpecification());
+        }
+
         [Authorize]
         [UseSorting]
         [UseFiltering]
@@ -53,12 +61,8 @@ namespace EShop.Infrastructure
         [Authorize]
         public Task<User> GetUser(
             [Service] EShopDbContext context,
-            [Service] IHttpContextAccessor contextAccessor)
-        {
-            var user = contextAccessor.HttpContext.User;
-            //string id = user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString();
-            return userRepo.GetEntityBySpec(new UserSpecification(user.Claims.FirstOrDefault(i => i.Type == ClaimTypes.NameIdentifier).Value.ToString()));
-        }
+            [Service] IHttpContextAccessor contextAccessor) 
+            => userRepo.GetEntityBySpec(new UserSpecification(GetUserId(contextAccessor))); 
 
         private static string GetUserId(IHttpContextAccessor contextAccessor)
             => contextAccessor.HttpContext.User.Claims

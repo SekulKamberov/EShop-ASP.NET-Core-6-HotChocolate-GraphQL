@@ -1,4 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using System.Security.Claims;
+
+using Microsoft.AspNetCore.Http; 
+using Microsoft.Extensions.DependencyInjection;
 
 using EShop.Data;
 using EShop.Models;
@@ -7,9 +10,7 @@ using EShop.DTO.Common;
 using EShop.Core.Services;
 using EShop.Core.Repositories; 
 using EShop.Common.CustomException;
-using EShop.Infrastructure.Specifications;
-using Microsoft.AspNetCore.Http;
-using System.Security.Claims;
+using EShop.Infrastructure.Specifications; 
 
 namespace EShop.Infrastructure.Mutations
 {
@@ -55,7 +56,7 @@ namespace EShop.Infrastructure.Mutations
             };
         }
 
-        public async Task<bool> DeleteStore(DeleteInput input, EShopDbContext context)
+        public async Task<StorePayload> DeleteStore(DeleteInput input, EShopDbContext context)
         {
             Store store = await storeRepository.GetEntityBySpec(new StoreSpecification(input.Id));
             if (store is null)
@@ -65,7 +66,15 @@ namespace EShop.Infrastructure.Mutations
             if (!result)
                 throw new ModelExceptions() { DefaultError = $"The store could not be deleted" };
 
-            return true;
+            return new StorePayload
+            {
+                Id = store.Id,
+                Name = store.Name,
+                PhoneNumber = store.PhoneNumber,
+                Description = store.Description,
+                Address = store.Address,
+                AvatarUrl = store.AvatarUrl
+            };
         }
 
         public async Task<StorePayload> UpdateStore(UpdateStoreInput input, EShopDbContext context)

@@ -111,7 +111,7 @@ namespace EShop.Infrastructure.Mutations
                 => await storeMutations.AddStore(input, context, contextAccessor);
 
         [Authorize]
-        public async Task<bool> DeleteStore(
+        public async Task<StorePayload> DeleteStore(
             DeleteInput input,
             [Service] EShopDbContext context)       
                 => await storeMutations.DeleteStore(input, context);

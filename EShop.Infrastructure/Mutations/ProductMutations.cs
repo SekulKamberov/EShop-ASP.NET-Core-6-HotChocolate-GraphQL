@@ -41,7 +41,9 @@ namespace EShop.Infrastructure.Mutations
                 StoreId = input.StoreId,
                 Name = input.Name,
                 Price = input.Price,
-                AvatarUrl = input.AvatarUrl
+                Description = input.Description,
+                AvatarUrl = input.AvatarUrl,
+                Warranty = input.Warranty
             };
 
             var result = await productRepository.AddEntity(product);
@@ -53,7 +55,9 @@ namespace EShop.Infrastructure.Mutations
                 Id = product.Id,
                 Name = product.Name,
                 Price = product.Price,
-                AvatarUrl = input.AvatarUrl
+                Description = input.Description,
+                AvatarUrl = input.AvatarUrl,
+                Warranty = input.Warranty
             };
         } 
 
