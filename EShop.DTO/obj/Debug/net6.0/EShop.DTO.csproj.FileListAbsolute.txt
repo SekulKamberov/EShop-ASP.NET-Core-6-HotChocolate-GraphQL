@@ -10,3 +10,15 @@ C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.DTO\obj\Debug\net6.0\EShop.
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.DTO\obj\Debug\net6.0\refint\EShop.DTO.dll
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.DTO\obj\Debug\net6.0\EShop.DTO.pdb
 C:\Users\sekne\OneDrive\Documents\GitHub\EShop\EShop.DTO\obj\Debug\net6.0\ref\EShop.DTO.dll
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\bin\Debug\net6.0\EShop.DTO.deps.json
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\bin\Debug\net6.0\EShop.DTO.dll
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\bin\Debug\net6.0\EShop.DTO.pdb
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\EShop.DTO.csproj.AssemblyReference.cache
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\EShop.DTO.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\EShop.DTO.AssemblyInfoInputs.cache
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\EShop.DTO.AssemblyInfo.cs
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\EShop.DTO.csproj.CoreCompileInputs.cache
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\EShop.DTO.dll
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\refint\EShop.DTO.dll
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\EShop.DTO.pdb
+C:\Users\sekne\Desktop\Test\EShop\EShop.DTO\obj\Debug\net6.0\ref\EShop.DTO.dll

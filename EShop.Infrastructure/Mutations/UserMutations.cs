@@ -126,6 +126,7 @@ namespace EShop.Infrastructure.Mutations
 
                 AuthenticationResult token = await jwtService.GetToken(user, userManager);
 
+                response.Id = user.Id;
                 response.TokenData = token;
                 response.Message = "Successful";
                 response.Email = user.Email;

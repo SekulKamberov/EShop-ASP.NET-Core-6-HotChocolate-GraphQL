@@ -1,6 +1,7 @@
 ﻿using EShop.Core.Repositories;
 using EShop.Core.Services;
 using EShop.Core.Specifications;
+using EShop.Infrastructure.DataLoaders;
 using EShop.Infrastructure.Mutations;
 using EShop.Infrastructure.Repositories;
 using EShop.Infrastructure.Services;
@@ -26,7 +27,9 @@ namespace EShop.API.Extensions
             services.AddScoped<IProductMutations, ProductMutations>();
             services.AddScoped<IStoreMutations, StoreMutations>();
             services.AddScoped<ICartMutations, CartMutations>(); 
-            services.AddScoped<IOrderMutations, OrderMutations>();  
+            services.AddScoped<IOrderMutations, OrderMutations>();
+            services.AddScoped<IProductsRepository, ProductsRepository>();
+            services.AddScoped<ProductDataLoader>(); 
         } 
     }
 }

@@ -1,4 +1,4 @@
-﻿using System.Linq.Expressions;
+﻿using System.Linq.Expressions; 
 
 using EShop.Core.Specifications;
 
@@ -13,5 +13,6 @@ namespace EShop.Core.Repositories
         Task<bool> DeleteEntity(TEntity entity);
         Task<bool> DeleteAll(Expression<Func<TEntity, bool>> predicate);
         Task<bool> AddRangeAsync(ICollection<TEntity> entities);
+        //Task<IEnumerable<TEntity>> GetEntitiesAsync();
     }
 }

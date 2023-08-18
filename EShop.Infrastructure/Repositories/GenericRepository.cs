@@ -11,10 +11,10 @@ namespace EShop.Infrastructure.Repositories
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity> where TEntity : class
     {
-        private readonly EShopDbContext context;
+        private readonly EShopDbContext context; 
 
         public GenericRepository(EShopDbContext _context)
-        {
+        { 
             context = _context;
         } 
 
@@ -33,6 +33,9 @@ namespace EShop.Infrastructure.Repositories
         {
             return SpecificationEvaluator<TEntity>.EvaluateQuery(context.Set<TEntity>().AsQueryable(), spec);
         }
+
+        //public async Task<IEnumerable<TEntity>> GetEntitiesAsync() 
+        //    => await context.Set<TEntity>().ToListAsync();   
 
         public async Task<bool> AddEntity(TEntity entity)
         { 
@@ -67,7 +70,11 @@ namespace EShop.Infrastructure.Repositories
         public async Task<bool> DeleteAll(Expression<Func<TEntity, bool>> predicate)
         {
             var entitiesToDelete = context.Set<TEntity>().Where(predicate).AsQueryable();
-            if(entitiesToDelete.Any())
+
+            if (entitiesToDelete is null)
+                return false;
+
+                if (entitiesToDelete.Any())
             {
                 context.Set<TEntity>().RemoveRange(entitiesToDelete);
                 return await context.SaveChangesAsync() > 0;
@@ -84,6 +91,6 @@ namespace EShop.Infrastructure.Repositories
             }
             catch(Exception ex) { Console.WriteLine(ex.Message.ToString()); }
             return false;
-        }
+        } 
     }
 }

@@ -1,16 +1,17 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Security.Claims;
+
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.EntityFrameworkCore;
 
 using HotChocolate.Authorization;
- 
+
 using EShop.Core.Repositories;
 using EShop.Data;
 using EShop.Infrastructure.Specifications;
 using EShop.Models;
-using System.Security.Claims;
-using Microsoft.EntityFrameworkCore;
 
-namespace EShop.Infrastructure
+namespace EShop.Infrastructure.Queries
 {
     public class Query
     {
@@ -26,19 +27,17 @@ namespace EShop.Infrastructure
             categoryRepo = serviceProvider.GetRequiredService<IGenericRepository<ProductCategory>>();
             userRepo = serviceProvider.GetRequiredService<IGenericRepository<User>>();
         }
-
-        [UseSorting]
-        [UseFiltering]
+         
         public async Task<IReadOnlyList<Product>> GetProductsAsync([Service] EShopDbContext context)
         {
             return await productRepo.ListAllEntityBySpec(new ProductSpecification());
         }
 
-        [UseSorting]
-        [UseFiltering]
-        public async Task<IReadOnlyList<ProductCategory>> GetCategoriesAsync([Service] EShopDbContext context)
+        [Authorize]
+        public async Task<IEnumerable<ProductCategory>> GetCategoriesAsync(
+            [Service] EShopDbContext context)
         {
-            return await categoryRepo.ListAllEntityBySpec(new CategorySpecification());
+            return await context.Set<ProductCategory>().ToListAsync();
         }
 
         [Authorize]
@@ -47,9 +46,9 @@ namespace EShop.Infrastructure
         public async Task<IReadOnlyList<Store>> GetStoresAsync(
             [Service] EShopDbContext context,
             [Service] IHttpContextAccessor contextAccessor)
-        { 
+        {
             return await storeRepo.ListAllEntityBySpec(new StoreByUserSpecification(GetUserId(contextAccessor)));
-        } 
+        }
 
         [UseSorting]
         [UseFiltering]
@@ -61,8 +60,8 @@ namespace EShop.Infrastructure
         [Authorize]
         public Task<User> GetUser(
             [Service] EShopDbContext context,
-            [Service] IHttpContextAccessor contextAccessor) 
-            => userRepo.GetEntityBySpec(new UserSpecification(GetUserId(contextAccessor))); 
+            [Service] IHttpContextAccessor contextAccessor)
+            => userRepo.GetEntityBySpec(new UserSpecification(GetUserId(contextAccessor)));
 
         private static string GetUserId(IHttpContextAccessor contextAccessor)
             => contextAccessor.HttpContext.User.Claims
